@@ -81,7 +81,7 @@ transition: 0.5s;
     position: absolute;
     width: 700px;
     height: 700px;
-    z-index: 5;
+    /* z-index: 5; */
     font-weight: bold;
   color: white;
   text-align: center;
@@ -125,7 +125,7 @@ transition: 0.5s;
 	/* left: 0;
 	right: 0;
 	margin: auto; */
-   
+   perspective: 400px;;
     }
 
 
