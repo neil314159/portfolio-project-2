@@ -4,8 +4,6 @@ document.addEventListener("DOMContentLoaded", function(){
 
     for(let slot of slots){
         slot.addEventListener("click", function(){
-
-        
         this.classList.add("green");
     });
     }
@@ -37,10 +35,7 @@ document.addEventListener("DOMContentLoaded", function(){
         shadows[0].classList.remove("spinbackshadow");
         shadows[0].classList.add("spinfrontshadow");
     });
-
-    
-    
-    
     
 })
+
 
