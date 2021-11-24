@@ -127,11 +127,11 @@ transition: 0.5s;
 	/* background: rgba(0,0,0,0.8); */
     background: yellow;
 	position: absolute;
-	top: 55%;
+	top: 45%;
     -webkit-transform: rotateX(90deg);
-	transform: rotateX(90deg) translateZ(-10px);
+	transform: rotateX(90deg) translateZ(-150px);
 
-	z-index: -1;
+	z-index: -1000;
 	/* transform-style: preserve-3d; */
     transition:  0.7s;
 	filter: blur(25px);
