@@ -127,9 +127,9 @@ transition: 0.5s;
 	/* background: rgba(0,0,0,0.8); */
     background: yellow;
 	position: absolute;
-	top: 35%;
-    -webkit-transform: rotateX(85deg);
-	transform: rotateX(85deg) translateZ(-150px);
+	top: 30%;
+    /* -webkit-transform: rotateX(85deg); */
+	transform: rotateX(75deg) translateZ(-150px);
 
 	z-index: -1000;
 	transform-style: preserve-3d;
@@ -146,5 +146,5 @@ transition: 0.5s;
     .spinfront  { transform: translateZ(-350px) rotateY(   0deg); }
 .spinback   { transform: translateZ(-350px) rotateY(-180deg); }
 
-.spinfrontshadow  { transform: rotateX(85deg) rotateY(0deg) translateZ(-150px); }
-.spinbackshadow   { transform: rotateX(85deg) rotateZ(180deg) translateZ(-150px); }
+.spinfrontshadow  { transform: rotateX(75deg) rotateY(0deg) translateZ(-150px); }
+.spinbackshadow   { transform: rotateX(75deg) rotateZ(180deg) translateZ(-150px); }
