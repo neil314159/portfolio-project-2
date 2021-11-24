@@ -54,6 +54,7 @@ transition: 0.5s;
     /* border: 1px solid #CCC; */
   /* margin: 80px; */
   perspective: 900px;
+  
 }
 
 .box {
@@ -63,7 +64,10 @@ transition: 0.5s;
     transform-style: preserve-3d;
     transform: translateZ(-350px);
     transition: transform 0.7s;
-  }
+
+   
+
+}
 
   .spinfront  { transform: translateZ(-350px) rotateY(   0deg); }
 .spinback   { transform: translateZ(-350px) rotateY(-180deg); }
@@ -77,6 +81,7 @@ transition: 0.5s;
     font-weight: bold;
   color: white;
   text-align: center;
+  
   }
 
   /* .boxfacefront  {  transform: rotateY(  0deg) translateZ(350px);}
@@ -98,3 +103,21 @@ transition: 0.5s;
     .boxfaceleft   { transform: rotateY(-90deg) translateZ(350px); }
     .boxfacetop    { transform: rotateX( 90deg) translateZ(350px); }
     .boxfacebottom { transform: rotateX(-90deg) translateZ(350px); }
+
+    .shadow{
+
+        display: block;
+	width: 520px;
+	height: 500px;
+	background: rgba(0,0,0,0.8);
+	position: absolute;
+	top: 55%;
+	transform: rotateX(90deg);
+	z-index: -5;
+	
+	filter: blur(25px);
+	left: 0;
+	right: 0;
+	margin: auto;
+	
+    }
