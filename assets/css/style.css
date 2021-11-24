@@ -68,12 +68,13 @@ transition: 0.5s;
     transform: translateZ(-350px);
     transition: transform 0.7s;
 
-   
+   display: block;
    
 }
 
 .buttons{
-    z-index: 10;
+    /* display: clea */
+    /* z-index: 10; */
 }
 
 
@@ -86,6 +87,9 @@ transition: 0.5s;
   color: white;
   text-align: center;
   
+
+
+  display: block;
   }
 
   /* .boxfacefront  {  transform: rotateY(  0deg) translateZ(350px);}
