@@ -28,8 +28,13 @@ border-radius: 50%;
 width: auto;
 height: auto;
 justify-content: center;
+
  }
 
  .green{
      background: green;
+ }
+
+ .slot:not(.green):hover{
+     background:cyan;
  }
