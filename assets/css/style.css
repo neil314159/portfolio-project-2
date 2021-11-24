@@ -107,7 +107,7 @@ transition: 0.5s;
     .shadow{
 
         display: block;
-	width: 520px;
+	width: 500px;
 	height: 500px;
 	background: rgba(0,0,0,0.8);
     /* background: yellow; */
