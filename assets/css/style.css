@@ -5,7 +5,7 @@
  }
 
  body{
-background: #000c41;
+background: #db7806;
 height: 100%;
 width: 100%;
 align-items: center;
@@ -28,7 +28,7 @@ gap: 10px;
 /* padding:10px;
 align-items: center;
 justify-items: center; */
-background: orange;
+background: rgb(4, 28, 165);
 
 justify-content: space-evenly;
   justify-items: center;
@@ -37,7 +37,7 @@ justify-content: space-evenly;
  }
 
  .slot{
-background: blue;
+background: rgb(220, 220, 226);
 border-radius: 50%;
 /* align-self: center;
 justify-self: center; */
@@ -111,7 +111,7 @@ transition: 0.5s;
     .boxfaceleft   { background: navy; }
     .boxfacetop    { background: green; }
     .boxfacebottom { background: green; }
-    .boxfaceshadow { background: green; 
+    .boxfaceshadow { background: rgb(15, 15, 15); 
         filter: blur(25px);
     }
     
