@@ -113,7 +113,7 @@ transition: 0.5s;
 	position: absolute;
 	top: 55%;
 	transform: rotateX(90deg);
-	z-index: -5;
+	z-index: -25;
 	/* transform-style: preserve-3d; */
     transition:  0.7s;
 	filter: blur(25px);
@@ -121,7 +121,6 @@ transition: 0.5s;
 	right: 0;
 	margin: auto;
    
-	/* animation: rotateShadow ; */
     }
 
     
@@ -129,4 +128,4 @@ transition: 0.5s;
 .spinback   { transform: translateZ(-350px) rotateY(-180deg); }
 
 .spinfrontshadow  { transform: rotateX(90deg) rotateY(0deg); }
-.spinbackshadow   { transform: rotateX(90deg) rotateZ(180deg)translatez(5px); }
+.spinbackshadow   { transform: rotateX(90deg) rotateZ(180deg); }
