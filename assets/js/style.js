@@ -10,6 +10,24 @@ document.addEventListener("DOMContentLoaded", function(){
     });
     }
 
+
+    let buttons = document.getElementsByClassName("menu");
+    console.log(buttons);
+    buttons[0].addEventListener("click", function(){
+
+        console.log("getting here");
+        this.classList.add("spinback");
+    });
+    
+    let faces = document.getElementsByClassName("boxface");
+    console.log("getting this far");
+
+        faces[1].addEventListener("click", function(){
+
+        console.log("getting here");
+        this.classList.add("spinback");
+    });
     
     
 })
+

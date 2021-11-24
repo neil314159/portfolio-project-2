@@ -13,9 +13,10 @@ display:flex;
 flex-direction: column;
  }
 
+
  .game{
-width: 90vw;
-padding-top: 100%;
+/* width: 90vw;
+padding-top: 100%; */
 
 /* height: 90vh; */
 display:grid;
@@ -46,4 +47,38 @@ transition: 0.5s;
  .slot:not(.green):hover{
      background:cyan;
  }
+
+.scene{
+    width: 700px;
+    height: 700px;
+    /* border: 1px solid #CCC; */
+  /* margin: 80px; */
+  perspective: 900px;
+}
+
+.box {
+    width: 700px;
+    height: 700px;
+    position: relative;
+    transform-style: preserve-3d;
+    transform: translateZ(-350px);
+    transition: transform 0.7s;
+  }
+
+  .box.spinfront  { transform: translateZ(-350px) rotateY(   0deg); }
+.box.spinback   { transform: translateZ(-350px) rotateY(-180deg); }
+
+
+.boxface {
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    
+  }
+
+  .boxfacefront  {  transform: rotateY(  0deg) translateZ(350px);}
+.boxfaceright  { background: rgba(0, 81, 255, 0.7); }
+.boxfaceleft{background: orange;}
+.boxfaceback   { background: hsla(120, 100%, 50%, 0.7); 
+    transform: rotateY(180deg) translateZ(350px);}
 
