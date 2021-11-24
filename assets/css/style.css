@@ -5,21 +5,27 @@
  }
 
  body{
-background: white;
+background: red;
 height: 100%;
 width: 100%;
+align-items: center;
+display:flex;
+flex-direction: column;
  }
 
  .game{
-width: 600px;
+width: 700px;
 height: 600px;
 display:grid;
-grid-template-columns: 1fr 1fr 1fr;
-grid-template-rows: 1fr 1fr 1fr 1fr;
-
+grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+background: yellow;
  }
 
  .slot{
 background: blue;
-
+border-radius: 50%;
+width: auto;
+height: auto;
+justify-content: center;
  }
