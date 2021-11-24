@@ -1,1 +1,25 @@
- 
+ *{
+     margin:0;
+     padding:0;
+     box-sizing:border-box;
+ }
+
+ body{
+background: white;
+height: 100%;
+width: 100%;
+ }
+
+ .game{
+width: 600px;
+height: 600px;
+display:grid;
+grid-template-columns: 1fr 1fr 1fr;
+grid-template-rows: 1fr 1fr 1fr 1fr;
+
+ }
+
+ .slot{
+background: blue;
+
+ }
