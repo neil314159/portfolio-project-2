@@ -12,21 +12,26 @@ document.addEventListener("DOMContentLoaded", function(){
 
 
     let buttons = document.getElementsByClassName("menu");
-    console.log(buttons);
+    // console.log(buttons);
     buttons[0].addEventListener("click", function(){
-
-        console.log("getting here");
-        this.classList.add("spinback");
+// alert("here");
+        // console.log("getting here");
+        let faces = document.getElementsByClassName("box");
+        faces[0].classList.add("spinback");
     });
+
+    let buttons2 = document.getElementsByClassName("front");
+    // console.log(buttons);
+    buttons2[0].addEventListener("click", function(){
+// alert("here");
+        // console.log("getting here");
+        let faces = document.getElementsByClassName("box");
+        faces[0].classList.remove("spinback");
+        faces[0].classList.add("spinfront");
+    });
+
     
-    let faces = document.getElementsByClassName("boxface");
-    console.log("getting this far");
-
-        faces[1].addEventListener("click", function(){
-
-        console.log("getting here");
-        this.classList.add("spinback");
-    });
+    
     
     
 })
