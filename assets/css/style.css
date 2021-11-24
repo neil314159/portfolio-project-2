@@ -117,15 +117,16 @@ transition: 0.5s;
     background: yellow;
 	position: absolute;
 	top: 55%;
+    -webkit-transform: rotateX(90deg);
 	transform: rotateX(90deg);
 	z-index: -1;
 	/* transform-style: preserve-3d; */
     transition:  0.7s;
 	filter: blur(25px);
-	/* left: 0;
+	left: 0;
 	right: 0;
-	margin: auto; */
-   perspective: 400px;;
+	margin: auto;
+   /* perspective: 400px;; */
     }
 
 
