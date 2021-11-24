@@ -109,20 +109,21 @@ transition: 0.5s;
         display: block;
 	width: 520px;
 	height: 500px;
-	/* background: rgba(0,0,0,0.8); */
-    background: yellow;
+	background: rgba(0,0,0,0.8);
+    /* background: yellow; */
 	position: absolute;
 	top: 55%;
 	transform: rotateX(90deg);
-	z-index: -25;
-	transform-style: preserve-3d;
+	z-index: -1;
+	/* transform-style: preserve-3d; */
     transition:  0.7s;
 	filter: blur(25px);
-	left: 0;
+	/* left: 0;
 	right: 0;
-	margin: auto;
+	margin: auto; */
    
     }
+
 
     
     .spinfront  { transform: translateZ(-350px) rotateY(   0deg); }
