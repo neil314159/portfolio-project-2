@@ -56,11 +56,11 @@ transition: 0.5s;
  }
 
 .scene{
-    position: absolute;
+    /* position: absolute; */
     width: 700px;
     height: 700px;
     /* border: 1px solid #CCC; */
-  /* margin: 80px; */
+  margin: 80px;
   perspective: 900px;
   
 }
