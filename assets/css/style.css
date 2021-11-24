@@ -5,7 +5,7 @@
  }
 
  body{
-background: red;
+background: #FF0074;
 height: 100%;
 width: 100%;
 align-items: center;
@@ -14,21 +14,27 @@ flex-direction: column;
  }
 
  .game{
-width: 700px;
-height: 600px;
+width: 90vw;
+height: 90vh;
 display:grid;
 grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
 grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+gap: 30px;
+padding:30px;
+align-items: center;
+justify-items: center;
 background: yellow;
  }
 
  .slot{
 background: blue;
 border-radius: 50%;
-width: auto;
-height: auto;
+/* align-self: center;
+justify-self: center; */
+width: 100%;
+padding-top: 100%;
 justify-content: center;
-
+transition: 0.5s;
  }
 
  .green{
@@ -38,3 +44,4 @@ justify-content: center;
  .slot:not(.green):hover{
      background:cyan;
  }
+
