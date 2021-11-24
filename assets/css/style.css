@@ -90,7 +90,7 @@ transition: 0.5s;
 .boxfaceback   { background: hsla(120, 100%, 50%, 0.7); 
     transform: rotateY(180deg) translateZ(350px);} */
 
-    .boxfacefront  { background: hsla(  0, 100%, 50%, 0.7); }
+    .boxfacefront  { background: green; }
     .boxfaceright  { background: navy; }
     .boxfaceback   { background: red; }
     .boxfaceleft   { background: navy; }
