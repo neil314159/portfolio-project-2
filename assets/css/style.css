@@ -70,11 +70,7 @@ transition: 0.5s;
 
 }
 
-  .spinfront  { transform: translateZ(-350px) rotateY(   0deg); }
-.spinback   { transform: translateZ(-350px) rotateY(-180deg); }
-
-.spinfrontshadow  { transform: rotateX(90deg) rotateY(   0deg); }
-.spinbackshadow   { transform: rotateX(90deg) rotateY(-90deg) translateZ(-100px); }
+  
 
 
 .boxface {
@@ -96,7 +92,7 @@ transition: 0.5s;
 
     .boxfacefront  { background: hsla(  0, 100%, 50%, 0.7); }
     .boxfaceright  { background: navy; }
-    .boxfaceback   { background: white; }
+    .boxfaceback   { background: red; }
     .boxfaceleft   { background: navy; }
     .boxfacetop    { background: green; }
     .boxfacebottom { background: green; }
@@ -110,15 +106,15 @@ transition: 0.5s;
 
     .shadow{
 
-        /* display: block; */
+        display: block;
 	width: 520px;
 	height: 500px;
 	background: rgba(0,0,0,0.8);
 	position: absolute;
 	top: 55%;
-	/* transform: rotateX(90deg); */
+	transform: rotateX(90deg);
 	z-index: -5;
-	transform-style: preserve-3d;
+	/* transform-style: preserve-3d; */
     transition:  0.7s;
 	filter: blur(25px);
 	left: 0;
@@ -129,4 +125,8 @@ transition: 0.5s;
     }
 
     
-    
+    .spinfront  { transform: translateZ(-350px) rotateY(   0deg); }
+.spinback   { transform: translateZ(-350px) rotateY(-180deg); }
+
+.spinfrontshadow  { transform: rotateX(90deg) rotateY(0deg); }
+.spinbackshadow   { transform: rotateX(90deg) rotateZ(180deg)translatez(5px); }
