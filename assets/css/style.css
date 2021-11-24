@@ -128,8 +128,8 @@ transition: 0.5s;
     background: yellow;
 	position: absolute;
 	top: 45%;
-    -webkit-transform: rotateX(90deg);
-	transform: rotateX(90deg) translateZ(-150px);
+    -webkit-transform: rotateX(85deg);
+	transform: rotateX(85deg) translateZ(-150px);
 
 	z-index: -1000;
 	/* transform-style: preserve-3d; */
