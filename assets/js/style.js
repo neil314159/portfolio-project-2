@@ -137,36 +137,74 @@ function gameClick(i) {
     let column = (i % 7);
     let empties = emptySpacesColumn(column);
     let newSlot = ((column + 1) + (7 * (empties - 1))) - 1;
-
-    if (computerCheck.checked) {
-        //PC code
+    let slots = document.getElementsByClassName("slot");
 
 
-    } else {
 
+    if (empties > 0) {
 
-        let slots = document.getElementsByClassName("slot");
-        if (empties > 0) {
+        if (computerCheck.checked){
 
-            slots[newSlot].classList.remove("clear");
+            slots[newSlot].classList.add("yellow");
+            checkForWin("yellow");
 
-            if (playerColour.textContent === "yellow") {
+            let pcMove = computerNextMove();
+            
+       // console.log(pcMove);
+        let pcEmpty = emptySpacesColumn(pcMove);
+        //console.log(pcEmpty);
+        let pcSlot = ((pcMove + 1) + (7 * (pcEmpty - 1))) - 1;
+       // console.log(pcSlot);
+        slots[pcSlot].classList.add("green");
+        checkForWin("green");
+        playerColour.textContent = "yellow";
 
-                slots[newSlot].classList.add("yellow");
-                checkForWin("yellow");
-                playerColour.textContent = "green";
-            } else if (playerColour.textContent === "green") {
-                slots[newSlot].classList.add("green");
-                checkForWin("green");
-                playerColour.textContent = "yellow";
-            }
+        } else{
+
+        if (playerColour.textContent === "yellow") {
+
+            slots[newSlot].classList.add("yellow");
+            checkForWin("yellow");
+            playerColour.textContent = "green";
+        } else if (playerColour.textContent === "green") {
+            slots[newSlot].classList.add("green");
+            checkForWin("green");
+            playerColour.textContent = "yellow";
         }
-        checkForDraw();
-
-        //computerNextMove();
-        //checkForDraw();
-
     }
+    checkForDraw();
+}
+
+
+
+    // if (computerCheck.checked) {
+    //     //PC code
+    //     slots[newSlot].classList.remove("clear");
+    //     slots[newSlot].classList.add("yellow");
+    //     checkForWin("yellow");
+
+    //     //playerColour.textContent = "green";
+    //    // let p = computerNextMove();
+    //    // console.log('getting here');
+    //     let pcMove = computerNextMove();
+    //     console.log(pcMove);
+    //     let pcEmpty = emptySpacesColumn(pcMove);
+    //     let pcSlot = ((column + 1) + (7 * (pcEmpty - 1))) - 1;
+    //     console.log(pcSlot);
+    //     slots[pcSlot].classList.add("green");
+    //     checkForWin("green");
+    //     playerColour.textContent = "yellow";
+
+    // } else {
+
+
+       
+       
+
+    //     //computerNextMove();
+    //     //checkForDraw();
+
+    // }
 
 
 
@@ -209,7 +247,7 @@ function checkForDraw() {
 function checkForWin(colourW) {
     let slots = document.getElementsByClassName("slot");
     let currentColour = colourW;
-    console.log(currentColour);
+   // console.log(currentColour);
     //check horizontally
 
 
@@ -348,6 +386,14 @@ function computerNextMove() {
     } else {
         nextMove = columnVotes.indexOf(Math.max(...columnVotes));
     }
+if(emptySpacesColumn(nextMove)===0){
+
+
+for(let i=0; i<7;i++){
+if(emptySpacesColumn(i)>0) nextMove = i;
+}
+}
+    //emptySpacesColumn(column);
 
     return nextMove;
 
