@@ -99,7 +99,8 @@ function gameClick(i) {
             playerColour.textContent = "yellow";
         }
     }
-    checkForWin("green");
+    //checkForWin("green");
+    computerNextMove();
     checkForDraw();
 }
 
@@ -189,5 +190,25 @@ function checkForWin(colourW) {
 }
 
 function computerNextMove() {
+    let columnVotes = [0,0,0,0,0,0,0];
+    let slots = document.getElementsByClassName("slot");
+    let currentColour = "green";
+
+//check base level first
+let baseCheckLeft = [38, 39, 40, 41];
+let baseCheckRight = [35, 36, 37, 38];
+
+for(let i=38; i<42; i++){
+if(slots[i-1].classList.contains(currentColour) && slots[i-2].classList.contains(currentColour) && slots[i-3].classList.contains(currentColour)){
+    columnVotes[i%7]++; alert('gotcha');
+}
+}
+
+for(let i=35; i<39; i++){
+    if(slots[i+1].classList.contains(currentColour) && slots[i+2].classList.contains(currentColour) && slots[i+3].classList.contains(currentColour)){
+        columnVotes[i%7]++; alert('gotcha');
+    }
+    }
+    console.log(columnVotes);
 
 }
