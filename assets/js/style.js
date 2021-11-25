@@ -154,8 +154,20 @@ alert('winner');
         }
     }
 
-    //check diagonally
+    //check diagonally top left to bottom right
+let leftRightStartingPoints = [0, 1, 2, 3, 7, 8, 9, 10, 14, 15, 16, 17];
+
+for(let i=0;i<leftRightStartingPoints.length; i++){
+    let k = leftRightStartingPoints[i];
+   // console.log(k);
+    if (slots[k].classList.contains(currentColour) && slots[k+8].classList.contains(currentColour) && slots[k+16].classList.contains(currentColour) && slots[k+24].classList.contains(currentColour)) alert('diagonal');
+   
+}
 
 
 
+    //check diagonally top right to bottom left
+
+let rightLeft = [3, 4, 5, 6, 13, 20];
+let rightLeftStartingPoints = [3, 4, 5, 6, 10, 11, 12, 13, 17,18, 19,20 ];
 }
