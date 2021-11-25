@@ -12,15 +12,15 @@ function createEventListeners() {
     darkcheckbox.addEventListener("change", function () {
         var element = document.body;
         element.classList.toggle("darkmode");
-       
+
     });
 
     var computerCheck = document.getElementById("computerPlayer");
 
     computerCheck.addEventListener("change", function () {
-       clearBoard();
+        clearBoard();
 
-       
+
     });
 
     let buttons = document.getElementsByClassName("menu");
@@ -28,15 +28,15 @@ function createEventListeners() {
     buttons[0].addEventListener("click", function () {
 
         let faces = document.getElementsByClassName("box");
-        
-        if(faces[0].classList.contains("spinback")){
+
+        if (faces[0].classList.contains("spinback")) {
             faces[0].classList.remove("spinback");
             aces[0].classList.add("spinfront");
         } else {
-        
-        faces[0].classList.remove("spinleft");
-        faces[0].classList.remove("spinfront");
-        faces[0].classList.add("spinback");
+
+            faces[0].classList.remove("spinleft");
+            faces[0].classList.remove("spinfront");
+            faces[0].classList.add("spinback");
         }
     });
 
@@ -94,6 +94,11 @@ function createEventListeners() {
 
 }
 
+function spinLeft() {
+    let faces = document.getElementsByClassName("box");
+    faces[0].classList.add("spinleft");
+}
+
 function createBoard() {
 
     for (let i = 0; i < 42; i++) {
@@ -119,47 +124,52 @@ function clearBoard() {
         slot.classList.add('clear');
     };
 
+    let playerColour = document.getElementById('player');
+    playerColour.textContent = "yellow";
+
 }
 
 function gameClick(i) {
 
     let computerCheck = document.getElementById("computerPlayer");
-//console.log(computerCheck.checked);
-if(computerCheck.checked){
-//PC code
+    let playerColour = document.getElementById('player');
 
-
-} else{
-
-
-}
     let column = (i % 7);
     let empties = emptySpacesColumn(column);
     let newSlot = ((column + 1) + (7 * (empties - 1))) - 1;
 
-    let slots = document.getElementsByClassName("slot");
+    if (computerCheck.checked) {
+        //PC code
 
 
-    let playerColour = document.getElementById('player');
+    } else {
 
 
-    if (empties > 0) {
+        let slots = document.getElementsByClassName("slot");
+        if (empties > 0) {
 
-        slots[newSlot].classList.remove("clear");
+            slots[newSlot].classList.remove("clear");
 
-        if (playerColour.textContent === "yellow") {
+            if (playerColour.textContent === "yellow") {
 
-            slots[newSlot].classList.add("yellow");
-
-            playerColour.textContent = "green";
-        } else if (playerColour.textContent === "green") {
-            slots[newSlot].classList.add("green");
-            playerColour.textContent = "yellow";
+                slots[newSlot].classList.add("yellow");
+                checkForWin("yellow");
+                playerColour.textContent = "green";
+            } else if (playerColour.textContent === "green") {
+                slots[newSlot].classList.add("green");
+                checkForWin("green");
+                playerColour.textContent = "yellow";
+            }
         }
+        checkForDraw();
+
+        //computerNextMove();
+        //checkForDraw();
+
     }
-    //checkForWin("green");
-    computerNextMove();
-    checkForDraw();
+
+
+
 }
 
 function emptySpacesColumn(toCheck) {
@@ -188,9 +198,9 @@ function checkForDraw() {
     }
 
     if (drawCounter === 0) {
-        return true;
+        spinLeft();
     } else {
-        return false;
+
     }
 }
 
@@ -199,14 +209,14 @@ function checkForDraw() {
 function checkForWin(colourW) {
     let slots = document.getElementsByClassName("slot");
     let currentColour = colourW;
-
+    console.log(currentColour);
     //check horizontally
 
 
     for (let i = 0; i < 42; i += 7) {
         for (let k = 0; k < 4; k++) {
             if (slots[i + k].classList.contains(currentColour) && slots[i + k + 1].classList.contains(currentColour) && slots[i + k + 2].classList.contains(currentColour) && slots[i + k + 3].classList.contains(currentColour)) {
-                alert('winner');
+                spinLeft();
             }
         }
 
@@ -218,7 +228,7 @@ function checkForWin(colourW) {
 
         for (let k = 0; k < 3; k++) {
 
-            if (slots[i + (7 * k)].classList.contains(currentColour) && slots[i + (7 * k) + 7].classList.contains(currentColour) && slots[i + (7 * k) + 14].classList.contains(currentColour) && slots[i + (7 * k) + 21].classList.contains(currentColour)) alert('winner vertical');
+            if (slots[i + (7 * k)].classList.contains(currentColour) && slots[i + (7 * k) + 7].classList.contains(currentColour) && slots[i + (7 * k) + 14].classList.contains(currentColour) && slots[i + (7 * k) + 21].classList.contains(currentColour)) spinLeft();
 
         }
     }
@@ -229,7 +239,7 @@ function checkForWin(colourW) {
     for (let i = 0; i < leftRightStartingPoints.length; i++) {
         let k = leftRightStartingPoints[i];
 
-        if (slots[k].classList.contains(currentColour) && slots[k + 8].classList.contains(currentColour) && slots[k + 16].classList.contains(currentColour) && slots[k + 24].classList.contains(currentColour)) alert('diagonal');
+        if (slots[k].classList.contains(currentColour) && slots[k + 8].classList.contains(currentColour) && slots[k + 16].classList.contains(currentColour) && slots[k + 24].classList.contains(currentColour)) spinLeft();
 
     }
 
@@ -242,10 +252,17 @@ function checkForWin(colourW) {
     for (let i = 0; i < rightLeftStartingPoints.length; i++) {
         let k = rightLeftStartingPoints[i];
 
-        if (slots[k].classList.contains(currentColour) && slots[k + 6].classList.contains(currentColour) && slots[k + 12].classList.contains(currentColour) && slots[k + 18].classList.contains(currentColour)) alert('diagonal');
+        if (slots[k].classList.contains(currentColour) && slots[k + 6].classList.contains(currentColour) && slots[k + 12].classList.contains(currentColour) && slots[k + 18].classList.contains(currentColour)) spinLeft();
 
     }
+
+
 }
+
+
+
+
+
 
 function computerNextMove() {
     let columnVotes = [0, 0, 0, 0, 0, 0, 0];
