@@ -78,7 +78,7 @@ function gameClick(i) {
         }
         myPlay();
     }
-
+checkForWin("green");
     checkForDraw();
 }
 
@@ -118,4 +118,27 @@ function myPlay() {
     var audio = new Audio("../assets/sounds/coin.wav");
     audio.volume = 0.3;
     audio.play();
+}
+
+function checkForWin(colourW){
+    let slots = document.getElementsByClassName("slot");
+    let currentColour = colourW;
+
+    //check horizontally
+
+
+    for (let i = 0; i < 42; i += 7) {
+        for(let k=0; k<4; k++){
+            if (slots[i+k].classList.contains(currentColour) && slots[i+k+1].classList.contains(currentColour) && slots[i+k+2].classList.contains(currentColour) && slots[i+k+3].classList.contains(currentColour)){
+alert('winner');
+            }
+        }
+
+        // if (slots[i].classList.contains("green") || slots[i].classList.contains("yellow")) {
+
+        //     emptyCounter += 1;
+        // }
+    }
+
+
 }
