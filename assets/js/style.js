@@ -193,6 +193,7 @@ function computerNextMove() {
     let columnVotes = [0, 0, 0, 0, 0, 0, 0];
     let slots = document.getElementsByClassName("slot");
     let currentColour = "green";
+    let nextMove = 3;
 
     //check base level first
     let baseCheckLeft = [38, 39, 40, 41];
@@ -237,20 +238,21 @@ function computerNextMove() {
 
         for (let k = 0; k < 3; k++) {
 
-            if (slots[i + (7 * k)].classList.contains("clear") && slots[i + (7 * k) + 7].classList.contains(currentColour) && slots[i + (7 * k) + 14].classList.contains(currentColour) && slots[i + (7 * k)+21].classList.contains(currentColour)) columnVotes[i % 7]++;
+            if (slots[i + (7 * k)].classList.contains("clear") && slots[i + (7 * k) + 7].classList.contains(currentColour) && slots[i + (7 * k) + 14].classList.contains(currentColour) && slots[i + (7 * k) + 21].classList.contains(currentColour)) columnVotes[i % 7]++;
 
         }
     }
-//check for diagonal winnnig streaks
+    //check for diagonal winnnig streaks
+
     let leftRightStartingPoints = [0, 1, 2, 3, 7, 8, 9, 10, 14, 15, 16, 17];
 
     for (let i = 0; i < leftRightStartingPoints.length; i++) {
         let k = leftRightStartingPoints[i];
 
-        if (slots[k].classList.contains(currentColour) && slots[k + 8].classList.contains(currentColour) && slots[k + 16].classList.contains(currentColour) && slots[k + 24].classList.contains(currentColour)) alert('diagonal');
+        if (slots[k].classList.contains("clear") && (slots[k + 7].classList.contains("green") || slots[k + 7].classList.contains("yellow")) && slots[k + 8].classList.contains(currentColour) && slots[k + 16].classList.contains(currentColour) && slots[k + 24].classList.contains(currentColour)) columnVotes[k % 7]++;
 
     }
-
+    //console.log(columnVotes);
 
     //check diagonally top right to bottom left
 
@@ -260,8 +262,18 @@ function computerNextMove() {
     for (let i = 0; i < rightLeftStartingPoints.length; i++) {
         let k = rightLeftStartingPoints[i];
 
-        if (slots[k].classList.contains(currentColour) && slots[k + 6].classList.contains(currentColour) && slots[k + 12].classList.contains(currentColour) && slots[k + 18].classList.contains(currentColour)) alert('diagonal');
+        if (slots[k].classList.contains("clear") && (slots[k + 7].classList.contains("green") || slots[k + 7].classList.contains("yellow")) && slots[k + 6].classList.contains(currentColour) && slots[k + 12].classList.contains(currentColour) && slots[k + 18].classList.contains(currentColour)) columnVotes[k % 7]++;
 
     }
     //console.log(columnVotes);
+
+    //console.log(newI);
+    if (Math.max(...columnVotes) === 0) {
+        nextMove = Math.floor(Math.random() * 6);
+    } else {
+        nextMove = columnVotes.indexOf(Math.max(...columnVotes));
+    }
+
+    return nextMove;
+
 }
