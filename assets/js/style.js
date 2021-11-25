@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     createEventListeners();
 })
 
+/**Generates and attaches all event listeners for buttons and checkboxed */
 function createEventListeners() {
     var darkcheckbox = document.getElementById("darkmodecheck");
 
@@ -62,7 +63,7 @@ function createEventListeners() {
         clearBoard();
     });
 }
-
+/**Sets up board at beginning of game */
 function createBoard() {
     for (let i = 0; i < 42; i++) {
         let slot = document.createElement('div');
@@ -76,6 +77,7 @@ function createBoard() {
     }
 }
 
+/**Clears board and resets game */
 function clearBoard() {
     let slots = document.getElementsByClassName("slot");
     for (let slot of slots) {
@@ -87,6 +89,12 @@ function clearBoard() {
     playerColour.textContent = "yellow";
 }
 
+/**When the player clicks to make a move, this function checks the board to make sure
+ * a valid slot is available. It places the token.
+ * 
+ * The game operates in 2 player and player VS computer mode, so this function checks the mode and 
+ * either switches back to the other player or makes a move on behalf of the computer
+ */
 function gameClick(i) {
     let computerCheck = document.getElementById("computerPlayer");
     let playerColour = document.getElementById('player');
@@ -120,6 +128,7 @@ function gameClick(i) {
     }
 }
 
+/**This returns the number of empty spaces available for a token in the given column */
 function emptySpacesColumn(toCheck) {
     let slots = document.getElementsByClassName("slot");
     let emptyCounter = 0;
@@ -131,6 +140,7 @@ function emptySpacesColumn(toCheck) {
     return 6 - emptyCounter;
 }
 
+/**This function evaluates the board to see if a fraw has been reached */
 function checkForDraw() {
     let slots = document.getElementsByClassName("slot");
     let drawCounter = 0;
@@ -144,6 +154,9 @@ function checkForDraw() {
     }
 }
 
+/**This function iterates through the entire board and checks for a pattern of four pieces in a line
+ * vertically, horizontally or diagonally. if there is a winner, the results page is called.
+ */
 function checkForWin(colourW) {
     let slots = document.getElementsByClassName("slot");
     let currentColour = colourW;
@@ -175,6 +188,10 @@ function checkForWin(colourW) {
     }
 }
 
+/**This function predicts a move for the computer to make. it does this by
+ * a) looking for patterns of three tokens about to be completed, and seeks to interrupt the pattern
+ * b) if no such pattern exists, it pkaces the token randomly on the board
+ */
 function computerNextMove() {
     let columnVotes = [0, 0, 0, 0, 0, 0, 0];
     let slots = document.getElementsByClassName("slot");
@@ -218,7 +235,7 @@ function computerNextMove() {
             if (slots[i + (7 * k)].classList.contains("clear") && slots[i + (7 * k) + 7].classList.contains(currentColour) && slots[i + (7 * k) + 14].classList.contains(currentColour) && slots[i + (7 * k) + 21].classList.contains(currentColour)) columnVotes[i % 7]++;
         }
     }
-    //check for diagonal winnnig streaks
+    //check for diagonal winnnig streaks top left to bottom right
     let leftRightStartingPoints = [0, 1, 2, 3, 7, 8, 9, 10, 14, 15, 16, 17];
     for (let i = 0; i < leftRightStartingPoints.length; i++) {
         let k = leftRightStartingPoints[i];
@@ -244,6 +261,7 @@ function computerNextMove() {
     return nextMove;
 }
 
+/**Display the results of the game to the user */
 function showResults() {
     let faces = document.getElementsByClassName("box");
     faces[0].classList.add("spinleft");

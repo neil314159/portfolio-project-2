@@ -1,3 +1,8 @@
+:root{
+    --cubefull: 500px;
+    --cubehalf: 250px;
+} 
+ 
  * {
      margin: 0;
      padding: 0;
@@ -5,7 +10,7 @@
  }
 
  body {
-     background: #FF0074;
+     background: #F012BE;
      height: 100%;
      width: 100%;
      align-items: center;
@@ -14,7 +19,7 @@
  }
 
  body.darkmode{
-     background: navy;
+     background: #001f3f;
  }
 
  .game {
@@ -24,7 +29,7 @@
      grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
      gap: 10px;
-     background: rgb(4, 28, 165);
+     background: #0074D9;
      justify-content: space-evenly;
      justify-items: center;
      align-content: space-evenly;
@@ -32,7 +37,7 @@
  }
 
  .slot {
-     background: rgb(220, 220, 226);
+     background: #7FDBFF;
      border-radius: 50%;
      width: 100%;
      padding-top: 100%;
@@ -41,15 +46,20 @@
  }
 
  .green {
-     background: green;
+     background: #2ECC40;
  }
 
  .yellow {
-    background: yellow;
+    background: #FFDC00;
 }
 
+/* .clear{
+    background:orange;;
+} */
+
  .slot.clear:hover {
-    background: cyan;
+    
+   opacity: 0.7;
 }
 
  .scene {
@@ -82,22 +92,22 @@
  }
 
  .boxfacefront {
-     background: green;
+     background: #0074D9;
      transform: rotateY(0deg) translateZ(350px);
  }
 
  .boxfaceright {
-     background: navy;
+     background: #FF851B;
      transform: rotateY(90deg) translateZ(350px);
  }
 
  .boxfaceback {
-     background: red;
+     background: #39CCCC;
      transform: rotateY(180deg) translateZ(350px);
  }
 
  .boxfaceleft {
-     background: navy;
+     background: #FF851B;
      transform: rotateY(-90deg) translateZ(350px);
  }
 
@@ -117,33 +127,6 @@
      filter: blur(25px);
  }
 
- /* .boxfacefront {
-     
- }
-
- .boxfaceright {
-     
- }
-
- .boxfaceback {
-     
- }
-
- .boxfaceleft {
-     
- }
-
- .boxfacetop {
-     
- }
-
- .boxfacebottom {
-     
- }
-
- .boxfaceshadow {
-     
- } */
 
 
  .spinfront {
@@ -166,7 +149,7 @@
      font-size: 3em;
  }
 
- 
+
 
  input.largecheck{
      width:2em;
@@ -176,4 +159,8 @@
  #mycheck{
     width:100px;
     height:100px;
+ }
+
+ @media (max-width: 760px) {
+
  }
