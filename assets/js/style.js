@@ -40,7 +40,7 @@ function createEventListeners() {
         faces[0].classList.add("spinfront");
     });
 
-    
+
 
     let newGameButtons = document.getElementsByClassName("newGame");
     newGameButtons[0].addEventListener("click", function () {
