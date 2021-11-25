@@ -25,7 +25,8 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 * Home Screen
 
 ### Features to implement in the future
-* Extend game logic
+* Currently the logic used by the computer player is quite simple. The game of Connect 4 has been solved mathematicallly, so it would be possible to add a file of all possible game permutations and select the best repsonse to make as a player. 
+* Adding some sound effects and animations to the game would increase the level of interactivity and user engagement.
 
 ## Wireframes
 
