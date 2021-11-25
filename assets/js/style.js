@@ -159,4 +159,8 @@ alert('winner');
         }
     }
 
+    //check diagonally
+
+    
+
 }
