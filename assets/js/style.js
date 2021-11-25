@@ -62,24 +62,24 @@ function gameClick(i) {
 
     let playerColour = document.getElementById('player');
 
-   
-        if (empties > 0) {
-            
+
+    if (empties > 0) {
+
         slots[newSlot].classList.remove("clear");
-       
-        if(playerColour.textContent==="yellow"){
-            
+
+        if (playerColour.textContent === "yellow") {
+
             slots[newSlot].classList.add("yellow");
-           
+
             playerColour.textContent = "green";
-        } else if(playerColour.textContent==="green"){
+        } else if (playerColour.textContent === "green") {
             slots[newSlot].classList.add("green");
-           playerColour.textContent = "yellow";
-        } 
+            playerColour.textContent = "yellow";
+        }
         myPlay();
     }
 
-
+    checkForDraw();
 }
 
 function emptySpacesColumn(toCheck) {
@@ -98,12 +98,23 @@ function emptySpacesColumn(toCheck) {
     return 6 - emptyCounter;
 }
 
-function checkForDraw(){
+function checkForDraw() {
 
+    let slots = document.getElementsByClassName("slot");
+    let drawCounter = 0;
+    for (let slot of slots) {
 
+        if (slot.classList.contains("clear")) drawCounter++;
+    }
+
+    if (drawCounter === 0) {
+        return true;
+    } else {
+        return false;
+    }
 }
 
-function myPlay(){
+function myPlay() {
     var audio = new Audio("../assets/sounds/coin.wav");
     audio.volume = 0.3;
     audio.play();
