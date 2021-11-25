@@ -1,5 +1,22 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+    var darkcheckbox = document.getElementById("darkmodecheck");
+
+    darkcheckbox.addEventListener("change", function() {
+        var element = document.body;
+  element.classList.toggle("darkmode");
+       // this.classList.toggle("darkmode");
+        // if (darkcheckbox.checked) {
+        //     document.body.classList.add("darkmode"); 
+        //     checkbox.checked = true; 
+        // } else {
+        //     document.body.classList.remove("darkmode"); 
+        //     checkbox.checked = false; 
+        // }
+      });
+      
+      
+
     createBoard();
 
     let buttons = document.getElementsByClassName("menu");
@@ -170,4 +187,15 @@ for(let i=0;i<leftRightStartingPoints.length; i++){
 
 let rightLeft = [3, 4, 5, 6, 13, 20];
 let rightLeftStartingPoints = [3, 4, 5, 6, 10, 11, 12, 13, 17,18, 19,20 ];
+
+for(let i=0;i<rightLeftStartingPoints.length; i++){
+    let k = rightLeftStartingPoints[i];
+   // console.log(k);
+    if (slots[k].classList.contains(currentColour) && slots[k+6].classList.contains(currentColour) && slots[k+12].classList.contains(currentColour) && slots[k+18].classList.contains(currentColour)) alert('diagonal');
+   
+}
+}
+
+function computerNextMove(){
+
 }
