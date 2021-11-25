@@ -76,7 +76,6 @@ function gameClick(i) {
             slots[newSlot].classList.add("green");
             playerColour.textContent = "yellow";
         }
-        myPlay();
     }
 checkForWin("green");
     checkForDraw();
@@ -114,11 +113,7 @@ function checkForDraw() {
     }
 }
 
-function myPlay() {
-    var audio = new Audio("../assets/sounds/coin.wav");
-    audio.volume = 0.3;
-    audio.play();
-}
+
 
 function checkForWin(colourW){
     let slots = document.getElementsByClassName("slot");
@@ -161,6 +156,6 @@ alert('winner');
 
     //check diagonally
 
-    
+
 
 }
