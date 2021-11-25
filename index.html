@@ -28,15 +28,19 @@
           <div class="boxface boxfaceback">
             <h1>Settings</h1>
             <div class="gamemenu">
-             <p> Computer Opponent   <input type="checkbox" class="largecheck" id="computerPlayer"></p>
+             <p> Computer Opponent   <input type="checkbox" class="largecheck" id="computerPlayer" checked></p>
            
             <p>  Night Mode   <input type="checkbox" class="largecheck" id="darkmodecheck"></p>
             
-            <button>Return to game</button>
+            <button class = "returnHome">Return to game</button>
           </div>
           </div>
           <div class="boxface boxfaceright">right</div>
-          <div class="boxface boxfaceleft">left</div>
+          <div class="boxface boxfaceleft">
+            <h1>Results</h1>
+            <div class="results"></div>
+            <button class = "newGame">Start a New Game</button>
+          </div>
           <div class="boxface boxfacetop">top</div>
           <div class="boxface boxfacebottom">bottom</div>
           <div class="boxface boxfaceshadow">bottom</div>
@@ -46,8 +50,9 @@
        
       
       <div class="buttons">
-        <button class="front">game</button>
-          <button class="menu">menu</button>
+        <button class="newGame">new game</button>
+          <button class="menu">settings</button>
+          <button class="side">side</button>
           </div>
    
     <script src="assets/js/style.js"></script>

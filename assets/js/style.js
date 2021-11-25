@@ -12,30 +12,15 @@ function createEventListeners() {
     darkcheckbox.addEventListener("change", function () {
         var element = document.body;
         element.classList.toggle("darkmode");
-        // this.classList.toggle("darkmode");
-        // if (darkcheckbox.checked) {
-        //     document.body.classList.add("darkmode"); 
-        //     checkbox.checked = true; 
-        // } else {
-        //     document.body.classList.remove("darkmode"); 
-        //     checkbox.checked = false; 
-        // }
+       
     });
 
     var computerCheck = document.getElementById("computerPlayer");
 
     computerCheck.addEventListener("change", function () {
-        // var element = document.body;
-        // element.classList.toggle("darkmode");
+       clearBoard();
 
-        // this.classList.toggle("darkmode");
-        // if (darkcheckbox.checked) {
-        //     document.body.classList.add("darkmode"); 
-        //     checkbox.checked = true; 
-        // } else {
-        //     document.body.classList.remove("darkmode"); 
-        //     checkbox.checked = false; 
-        // }
+       
     });
 
     let buttons = document.getElementsByClassName("menu");
@@ -43,21 +28,68 @@ function createEventListeners() {
     buttons[0].addEventListener("click", function () {
 
         let faces = document.getElementsByClassName("box");
+        
+        if(faces[0].classList.contains("spinback")){
+            faces[0].classList.remove("spinback");
+            aces[0].classList.add("spinfront");
+        } else {
+        
+        faces[0].classList.remove("spinleft");
+        faces[0].classList.remove("spinfront");
+        faces[0].classList.add("spinback");
+        }
+    });
+
+    let returnButtons = document.getElementsByClassName("returnHome");
+    returnButtons[0].addEventListener("click", function () {
+
+        let faces = document.getElementsByClassName("box");
+        faces[0].classList.remove("spinleft");
+        faces[0].classList.remove("spinback");
+        faces[0].classList.add("spinfront");
+
+    });
+
+    // returnButtons[1].addEventListener("click", function () {
+
+    //     let faces = document.getElementsByClassName("box");
+    //     faces[0].classList.remove("spinleft");
+    //     faces[0].classList.remove("spinback");
+    //     faces[0].classList.add("spinfront");
+
+    // });
+
+    let buttons3 = document.getElementsByClassName("side");
+
+    buttons3[0].addEventListener("click", function () {
+
+        let faces = document.getElementsByClassName("box");
         faces[0].classList.add("spinleft");
 
     });
 
-    let buttons2 = document.getElementsByClassName("front");
+    let newGameButtons = document.getElementsByClassName("newGame");
 
-    buttons2[0].addEventListener("click", function () {
+    newGameButtons[0].addEventListener("click", function () {
 
         let faces = document.getElementsByClassName("box");
+        faces[0].classList.remove("spinback");
         faces[0].classList.remove("spinleft");
         faces[0].classList.add("spinfront");
         clearBoard();
 
 
     });
+
+    newGameButtons[1].addEventListener("click", function () {
+
+        let faces = document.getElementsByClassName("box");
+        faces[0].classList.remove("spinback");
+        faces[0].classList.remove("spinleft");
+        faces[0].classList.add("spinfront");
+        clearBoard();
+    });
+
 
 
 }
@@ -70,7 +102,7 @@ function createBoard() {
         slot.classList.add('slot');
         slot.classList.add('clear');
         slot.addEventListener("click", function () {
-            gameClick(i)
+            gameClick(i);
         });
 
         document.getElementById('game').appendChild(slot);
@@ -90,6 +122,17 @@ function clearBoard() {
 }
 
 function gameClick(i) {
+
+    let computerCheck = document.getElementById("computerPlayer");
+//console.log(computerCheck.checked);
+if(computerCheck.checked){
+//PC code
+
+
+} else{
+
+
+}
     let column = (i % 7);
     let empties = emptySpacesColumn(column);
     let newSlot = ((column + 1) + (7 * (empties - 1))) - 1;
