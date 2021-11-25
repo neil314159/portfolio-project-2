@@ -5,13 +5,14 @@
  }
 
  body{
-background: #db7806;
+background: #FF0074;
 height: 100%;
 width: 100%;
 align-items: center;
 display:flex;
 flex-direction: column;
  }
+ 
 
 
  .game{
@@ -123,32 +124,12 @@ transition: 0.5s;
     .boxfacebottom { transform: rotateX(-90deg) translateZ(350px); }
     .boxfaceshadow { transform: rotateX(-90deg) translateZ(400px); }
 
-    .shadow{
-
-        display: block;
-	width: 500px;
-	height: 500px;
-	/* background: rgba(0,0,0,0.8); */
-    background: yellow;
-	position: absolute;
-	top: 42%;
-    /* -webkit-transform: rotateX(85deg); */
-	transform: rotateX(60deg) translateZ(-150px);
-
-	z-index: -1000;
-	transform-style: preserve-3d;
-    transition:  0.7s;
-	filter: blur(25px);
-	left: 0;
-	right: 0;
-	margin: auto;
-   /* perspective: 400px;; */
-    }
+    
 
 
     
     .spinfront  { transform: translateZ(-350px) rotateY(   0deg); }
 .spinback   { transform: translateZ(-350px) rotateY(-180deg); }
 
-.spinfrontshadow  { transform: rotateX(105deg) rotateY(0deg) translateZ(-150px); }
-.spinbackshadow   { transform: rotateX(105deg) rotateZ(180deg) translateZ(-150px); }
+/* .spinfrontshadow  { transform: rotateX(105deg) rotateY(0deg) translateZ(-150px); }
+.spinbackshadow   { transform: rotateX(105deg) rotateZ(180deg) translateZ(-150px); } */
