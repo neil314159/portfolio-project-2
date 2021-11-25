@@ -1,104 +1,105 @@
-document.addEventListener("DOMContentLoaded", function(){
-    
-    
-//    console.log("first")
-createBoard();
-    
-//  let slots = document.getElementsByClassName("slot");
-//     for(let slot of slots){
-//         slot.addEventListener("click", function(){
-//         this.classList.add("green");
-//     });
-//     }
+document.addEventListener("DOMContentLoaded", function () {
+
+    createBoard();
 
     let buttons = document.getElementsByClassName("menu");
-    // console.log(buttons);
-    buttons[0].addEventListener("click", function(){
+
+    buttons[0].addEventListener("click", function () {
 
         let faces = document.getElementsByClassName("box");
         faces[0].classList.add("spinback");
-        // let shadows = document.getElementsByClassName("shadow");
-        // console.log(shadows);
-        // shadows[0].classList.add("spinbackshadow");
+
     });
 
     let buttons2 = document.getElementsByClassName("front");
-    // console.log(buttons);
-    buttons2[0].addEventListener("click", function(){
-// alert("here");
-        // console.log("getting here");
+
+    buttons2[0].addEventListener("click", function () {
+
         let faces = document.getElementsByClassName("box");
         faces[0].classList.remove("spinback");
         faces[0].classList.add("spinfront");
-clearBoard();
+        clearBoard();
 
-        // let shadows = document.getElementsByClassName("shadow");
-        // console.log(shadows);
-        // shadows[0].classList.remove("spinbackshadow");
-        // shadows[0].classList.add("spinfrontshadow");
+
     });
-    
+
 })
 
-function createBoard(){
+function createBoard() {
 
-    for(let i=0;i<42; i++){
+    for (let i = 0; i < 42; i++) {
         let slot = document.createElement('div');
-         slot.setAttribute('data-id', i);
+        slot.setAttribute('data-id', i);
         slot.classList.add('slot');
         slot.classList.add('clear');
-        slot.addEventListener("click", function(){gameClick(i)});
-        //     //console.log(this);
-        //     this.classList.add("green");
-        // });
+        slot.addEventListener("click", function () {
+            gameClick(i)
+        });
+
         document.getElementById('game').appendChild(slot);
     }
 }
 
 
-function clearBoard(){
+function clearBoard() {
 
- let slots = document.getElementsByClassName("slot");
-    for(let slot of slots){
-       // console.log(this.classList);
+    let slots = document.getElementsByClassName("slot");
+    for (let slot of slots) {
+
         slot.classList.remove('clear', 'green');
         slot.classList.add('clear');
     };
-    
+
 }
 
-function gameClick(i){
-    let column = (i%7);
+function gameClick(i) {
+    let column = (i % 7);
     let empties = emptySpacesColumn(column);
-   //console.log(empties);
+    let newSlot = ((column + 1) + (7 * (empties - 1))) - 1;
 
-    //let emptyspaces = emptySpacesColumn(i);
-    
     let slots = document.getElementsByClassName("slot");
-     
-if(empties>0){
-    slot[].classList.add("green");
+
+
+    let playerColour = document.getElementById('player');
+
+    console.log(playerColour.textContent);
+   // console.log(empties);
+        if (empties > 0) {
+            //console.log(playerColour);
+        slots[newSlot].classList.remove("clear");
+        //playerColour.textContent = "new";
+        if(playerColour.textContent==="yellow"){
+            //alert('here');
+            slots[newSlot].classList.add("yellow");
+            console.log(slots[newSlot]);
+            playerColour.textContent = "green";
+        } else if(playerColour.textContent==="green"){
+            slots[newSlot].classList.add("green");
+           playerColour.textContent = "yellow";
+        } 
+        // else{
+        //     slots[newSlot].classList.add("yellow");
+        //     playerColour.textContent = "green";
+        // }
+        
+        //console.log(slots[newSlot]);
+    }
+
+
 }
 
-    //slots[i].classList.remove("clear"); 
-    //slots[i].classList.add("green");
-    
-}
+function emptySpacesColumn(toCheck) {
 
-function emptySpacesColumn(toCheck){
-    //console.log(toCheck);
     let slots = document.getElementsByClassName("slot");
     let emptyCounter = 0;
 
-     for(let i=toCheck; i<42; i+=7){
-        //console.log(slots[i-1]);
-        if(slots[i].classList.contains("green")){
-         // console.log('here');
-            emptyCounter +=1;
-        }
-     }
-//console.log(6-emptyCounter);
-    //slots[toCheck].classList.add("green");
-return 6-emptyCounter;
-}
+    for (let i = toCheck; i < 42; i += 7) {
 
+        if (slots[i].classList.contains("green") || slots[i].classList.contains("yellow")) {
+
+            emptyCounter += 1;
+        }
+    }
+
+    return 6 - emptyCounter;
+}
