@@ -40,11 +40,7 @@ function createEventListeners() {
         faces[0].classList.add("spinfront");
     });
 
-    let buttons3 = document.getElementsByClassName("side");
-    buttons3[0].addEventListener("click", function () {
-        let faces = document.getElementsByClassName("box");
-        faces[0].classList.add("spinleft");
-    });
+    
 
     let newGameButtons = document.getElementsByClassName("newGame");
     newGameButtons[0].addEventListener("click", function () {

@@ -18,6 +18,8 @@
 
 The
 
+The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/).
+
 ## Features
 
 * Home Screen

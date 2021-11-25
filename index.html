@@ -1,60 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
-    <title>Connect 4</title>
+  <title>Connect 4</title>
 </head>
+
 <body>
-   <h1>Connect 4</h1> 
-   <p id="player">yellow</p>
+  <h1>Connect 4</h1>
+  <p>Current player: <span id="player">yellow</span></p>
 
-    <div class="scene">
-       
-     
-      <div class="box">
-          <div class="boxface boxfacefront">
-            <div class="game" id="game">
-                
-                
-            </div>
-            
+  <div class="scene">
 
-          </div>
-          <div class="boxface boxfaceback">
-            <h1>Settings</h1>
-            <div class="gamemenu">
-             <p> Computer Opponent   <input type="checkbox" class="largecheck" id="computerPlayer" checked></p>
-           
-            <p>  Night Mode   <input type="checkbox" class="largecheck" id="darkmodecheck"></p>
-            
-            <button class = "returnHome">Return to game</button>
-          </div>
-          </div>
-          <div class="boxface boxfaceright">right</div>
-          <div class="boxface boxfaceleft">
-            <h1>Results</h1>
-            <div class="results" id="resultstext"></div>
-            <button class = "newGame">Start a New Game</button>
-          </div>
-          <div class="boxface boxfacetop">top</div>
-          <div class="boxface boxfacebottom">bottom</div>
-          <div class="boxface boxfaceshadow">bottom</div>
+
+    <div class="box">
+      <div class="boxface boxfacefront">
+        <div class="game" id="game">
+
+
         </div>
-      
+
+
       </div>
-       
-      
-      <div class="buttons">
-        <button class="newGame">new game</button>
-          <button class="menu">settings</button>
-          <button class="side">side</button>
-          </div>
-   
-    <script src="assets/js/style.js"></script>
+      <div class="boxface boxfaceback">
+        <h1>Settings</h1>
+        <div class="gamemenu">
+          <label for="computerPlayer">Computer Opponent:</label>
+          <input type="checkbox" name="computerPlayer" id="computerPlayer" checked class="largecheck"><br>
+
+          <label for="darkmodecheck">Night Mode:</label>
+          <input type="checkbox" name="darkmodecheck" id="darkmodecheck" class="largecheck"><br>
+
+
+          <button class="returnHome button">Return to Game</button>
+        </div>
+      </div>
+      <div class="boxface boxfaceright"></div>
+      <div class="boxface boxfaceleft">
+        <h1>Results</h1>
+        <div class="results" id="resultstext"></div>
+        <button class="newGame button">Start a New Game</button>
+      </div>
+      <div class="boxface boxfacetop"></div>
+      <div class="boxface boxfacebottom"></div>
+      <div class="boxface boxfaceshadow"></div>
+    </div>
+
+  </div>
+
+
+  <div class="buttons">
+    <button class="newGame button">New Game</button>
+    <button class="menu button">Settings</button>
+
+  </div>
+
+  <script src="assets/js/style.js"></script>
 </body>
+
 </html>

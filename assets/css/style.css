@@ -1,7 +1,4 @@
-:root{
-    --cubefull: 500px;
-    --cubehalf: 250px;
-} 
+
  
  * {
      margin: 0;
@@ -22,6 +19,21 @@
      background: #001f3f;
  }
 
+ h1{
+     padding-top: 80px;
+    color: white;
+    text-decoration: none;
+   
+    /* vary text size to match size of page*/
+    font-size: clamp(2rem, 6vw + 1rem, 9rem);
+    font-family: 'Work Sans', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+   
+   
+    line-height: 6rem;
+ }
+
  .game {
      width: 100%;
      height: 100%;
@@ -37,7 +49,7 @@
  }
 
  .slot {
-     background: #7FDBFF;
+     background: #f2fbff;
      border-radius: 50%;
      width: 100%;
      padding-top: 100%;
@@ -164,3 +176,14 @@
  @media (max-width: 760px) {
 
  }
+
+ .button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 32px;
+  }
