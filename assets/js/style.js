@@ -22,13 +22,28 @@ function createEventListeners() {
         // }
     });
 
+    var computerCheck = document.getElementById("computerPlayer");
+
+    computerCheck.addEventListener("change", function () {
+        // var element = document.body;
+        // element.classList.toggle("darkmode");
+
+        // this.classList.toggle("darkmode");
+        // if (darkcheckbox.checked) {
+        //     document.body.classList.add("darkmode"); 
+        //     checkbox.checked = true; 
+        // } else {
+        //     document.body.classList.remove("darkmode"); 
+        //     checkbox.checked = false; 
+        // }
+    });
 
     let buttons = document.getElementsByClassName("menu");
 
     buttons[0].addEventListener("click", function () {
 
         let faces = document.getElementsByClassName("box");
-        faces[0].classList.add("spinback");
+        faces[0].classList.add("spinleft");
 
     });
 
@@ -37,7 +52,7 @@ function createEventListeners() {
     buttons2[0].addEventListener("click", function () {
 
         let faces = document.getElementsByClassName("box");
-        faces[0].classList.remove("spinback");
+        faces[0].classList.remove("spinleft");
         faces[0].classList.add("spinfront");
         clearBoard();
 

@@ -175,6 +175,14 @@ justify-self: center; */
      transform: translateZ(-350px) rotateY(-180deg);
  }
 
+ .spinright {
+    transform: translateZ(-350px) rotateY(-90deg);
+}
+
+.spinleft {
+    transform: translateZ(-350px) rotateY(90deg);
+}
+
  .gamemenu{
      font-size: 3em;
  }
