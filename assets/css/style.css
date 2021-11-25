@@ -20,12 +20,12 @@
  }
 
  h1{
-     padding-top: 80px;
+     padding-top: 40px;
     color: white;
     text-decoration: none;
    
     /* vary text size to match size of page*/
-    font-size: clamp(2rem, 6vw + 1rem, 9rem);
+    font-size: 4rem;
     font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
@@ -75,26 +75,27 @@
 }
 
  .scene {
-     width: 700px;
-     height: 700px;
-     margin: 80px;
+     width: 70vmin;
+     height: 70vmin;
+     margin-top: 25px;
+     margin-bottom: 70px;
      perspective: 900px;
  }
 
 
  .box {
-     width: 700px;
-     height: 700px;
+     /* width: 700px;
+     height: 700px; */
      position: relative;
      transform-style: preserve-3d;
-     transform: translateZ(-350px);
+     transform: translateZ(-35vmin);
      transition: transform 0.7s;
  }
 
  .boxface {
      position: absolute;
-     width: 700px;
-     height: 700px;
+     width: 70vmin;
+     height: 70vmin;
      /* z-index: 5; */
      font-weight: bold;
      color: white;
@@ -105,56 +106,56 @@
 
  .boxfacefront {
      background: #0074D9;
-     transform: rotateY(0deg) translateZ(350px);
+     transform: rotateY(0deg) translateZ(35vmin);
  }
 
  .boxfaceright {
      background: #FF851B;
-     transform: rotateY(90deg) translateZ(350px);
+     transform: rotateY(90deg) translateZ(35vmin);
  }
 
  .boxfaceback {
      background: #39CCCC;
-     transform: rotateY(180deg) translateZ(350px);
+     transform: rotateY(180deg) translateZ(35vmin);
  }
 
  .boxfaceleft {
      background: #FF851B;
-     transform: rotateY(-90deg) translateZ(350px);
+     transform: rotateY(-90deg) translateZ(35vmin);
  }
 
  .boxfacetop {
      background: green;
-     transform: rotateX(90deg) translateZ(350px);
+     transform: rotateX(90deg) translateZ(35vmin);
  }
 
  .boxfacebottom {
      background: green;
-     transform: rotateX(-90deg) translateZ(350px);
+     transform: rotateX(-90deg) translateZ(35vmin);
  }
 
  .boxfaceshadow {
      background: rgb(15, 15, 15);
-     transform: rotateX(-90deg) translateZ(400px);
+     transform: rotateX(-90deg) translateZ(40vmin);
      filter: blur(25px);
  }
 
 
 
  .spinfront {
-     transform: translateZ(-350px) rotateY(0deg);
+     transform: translateZ(-35vmin) rotateY(0deg);
  }
 
  .spinback {
-     transform: translateZ(-350px) rotateY(-180deg);
+     transform: translateZ(-35vmin) rotateY(-180deg);
  }
 
  .spinright {
-    transform: translateZ(-350px) rotateY(-90deg);
+    transform: translateZ(-35vmin) rotateY(-90deg);
 }
 
 .spinleft {
-    transform: translateZ(-350px) rotateY(90deg);
+    transform: translateZ(-35vmin) rotateY(90deg);
 }
 
  .gamemenu{
