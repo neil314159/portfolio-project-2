@@ -1,11 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
 
+
+    createBoard();
+    createEventListeners();
+
+})
+
+function createEventListeners() {
     var darkcheckbox = document.getElementById("darkmodecheck");
 
-    darkcheckbox.addEventListener("change", function() {
+    darkcheckbox.addEventListener("change", function () {
         var element = document.body;
-  element.classList.toggle("darkmode");
-       // this.classList.toggle("darkmode");
+        element.classList.toggle("darkmode");
+        // this.classList.toggle("darkmode");
         // if (darkcheckbox.checked) {
         //     document.body.classList.add("darkmode"); 
         //     checkbox.checked = true; 
@@ -13,11 +20,8 @@ document.addEventListener("DOMContentLoaded", function () {
         //     document.body.classList.remove("darkmode"); 
         //     checkbox.checked = false; 
         // }
-      });
-      
-      
+    });
 
-    createBoard();
 
     let buttons = document.getElementsByClassName("menu");
 
@@ -40,7 +44,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-})
+
+}
 
 function createBoard() {
 
@@ -94,7 +99,7 @@ function gameClick(i) {
             playerColour.textContent = "yellow";
         }
     }
-checkForWin("green");
+    checkForWin("green");
     checkForDraw();
 }
 
@@ -132,7 +137,7 @@ function checkForDraw() {
 
 
 
-function checkForWin(colourW){
+function checkForWin(colourW) {
     let slots = document.getElementsByClassName("slot");
     let currentColour = colourW;
 
@@ -140,62 +145,49 @@ function checkForWin(colourW){
 
 
     for (let i = 0; i < 42; i += 7) {
-        for(let k=0; k<4; k++){
-            if (slots[i+k].classList.contains(currentColour) && slots[i+k+1].classList.contains(currentColour) && slots[i+k+2].classList.contains(currentColour) && slots[i+k+3].classList.contains(currentColour)){
-alert('winner');
+        for (let k = 0; k < 4; k++) {
+            if (slots[i + k].classList.contains(currentColour) && slots[i + k + 1].classList.contains(currentColour) && slots[i + k + 2].classList.contains(currentColour) && slots[i + k + 3].classList.contains(currentColour)) {
+                alert('winner');
             }
         }
 
-        // if (slots[i].classList.contains("green") || slots[i].classList.contains("yellow")) {
-
-        //     emptyCounter += 1;
-        // }
     }
 
 
     //check vertically
     for (let i = 0; i < 7; i++) {
-        //console.log(i);
-        for(let k=0; k<3; k++){
-           
-    // if (slots[i+(7*k)].classList.contains(currentColour) && slots[i+(7*k)+7].classList.contains(currentColour))alert('winner vertical');
 
-    if (slots[i+(7*k)].classList.contains(currentColour) && slots[i+(7*k)+7].classList.contains(currentColour) && slots[i+(7*k)+14].classList.contains(currentColour) && slots[i+(7*k)+21].classList.contains(currentColour))alert('winner vertical');
-// console.log(i+(7*k))
-// console.log(i+(7*k)+7)
-// console.log(i+(7*k)+14)
-// console.log(i+(7*k)+21)
+        for (let k = 0; k < 3; k++) {
 
+            if (slots[i + (7 * k)].classList.contains(currentColour) && slots[i + (7 * k) + 7].classList.contains(currentColour) && slots[i + (7 * k) + 14].classList.contains(currentColour) && slots[i + (7 * k) + 21].classList.contains(currentColour)) alert('winner vertical');
 
-            
         }
     }
 
     //check diagonally top left to bottom right
-let leftRightStartingPoints = [0, 1, 2, 3, 7, 8, 9, 10, 14, 15, 16, 17];
+    let leftRightStartingPoints = [0, 1, 2, 3, 7, 8, 9, 10, 14, 15, 16, 17];
 
-for(let i=0;i<leftRightStartingPoints.length; i++){
-    let k = leftRightStartingPoints[i];
-   // console.log(k);
-    if (slots[k].classList.contains(currentColour) && slots[k+8].classList.contains(currentColour) && slots[k+16].classList.contains(currentColour) && slots[k+24].classList.contains(currentColour)) alert('diagonal');
-   
-}
+    for (let i = 0; i < leftRightStartingPoints.length; i++) {
+        let k = leftRightStartingPoints[i];
 
+        if (slots[k].classList.contains(currentColour) && slots[k + 8].classList.contains(currentColour) && slots[k + 16].classList.contains(currentColour) && slots[k + 24].classList.contains(currentColour)) alert('diagonal');
+
+    }
 
 
     //check diagonally top right to bottom left
 
-let rightLeft = [3, 4, 5, 6, 13, 20];
-let rightLeftStartingPoints = [3, 4, 5, 6, 10, 11, 12, 13, 17,18, 19,20 ];
+    let rightLeft = [3, 4, 5, 6, 13, 20];
+    let rightLeftStartingPoints = [3, 4, 5, 6, 10, 11, 12, 13, 17, 18, 19, 20];
 
-for(let i=0;i<rightLeftStartingPoints.length; i++){
-    let k = rightLeftStartingPoints[i];
-   // console.log(k);
-    if (slots[k].classList.contains(currentColour) && slots[k+6].classList.contains(currentColour) && slots[k+12].classList.contains(currentColour) && slots[k+18].classList.contains(currentColour)) alert('diagonal');
-   
-}
+    for (let i = 0; i < rightLeftStartingPoints.length; i++) {
+        let k = rightLeftStartingPoints[i];
+
+        if (slots[k].classList.contains(currentColour) && slots[k + 6].classList.contains(currentColour) && slots[k + 12].classList.contains(currentColour) && slots[k + 18].classList.contains(currentColour)) alert('diagonal');
+
+    }
 }
 
-function computerNextMove(){
+function computerNextMove() {
 
 }
