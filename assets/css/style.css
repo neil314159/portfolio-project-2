@@ -56,9 +56,13 @@ justify-self: center; */
     background: yellow;
 }
 
- .slot:not(.green):hover {
+ /* .slot:not(.green):hover {
      background: cyan;
- }
+ } */
+
+ .slot.clear:hover {
+    background: cyan;
+}
 
  .scene {
      /* position: absolute; */

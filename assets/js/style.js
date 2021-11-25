@@ -46,7 +46,7 @@ function clearBoard() {
     let slots = document.getElementsByClassName("slot");
     for (let slot of slots) {
 
-        slot.classList.remove('clear', 'green');
+        slot.classList.remove('clear', 'green', 'yellow');
         slot.classList.add('clear');
     };
 
@@ -62,27 +62,21 @@ function gameClick(i) {
 
     let playerColour = document.getElementById('player');
 
-    console.log(playerColour.textContent);
-   // console.log(empties);
+   
         if (empties > 0) {
-            //console.log(playerColour);
+            
         slots[newSlot].classList.remove("clear");
-        //playerColour.textContent = "new";
+       
         if(playerColour.textContent==="yellow"){
-            //alert('here');
+            
             slots[newSlot].classList.add("yellow");
-            console.log(slots[newSlot]);
+           
             playerColour.textContent = "green";
         } else if(playerColour.textContent==="green"){
             slots[newSlot].classList.add("green");
            playerColour.textContent = "yellow";
         } 
-        // else{
-        //     slots[newSlot].classList.add("yellow");
-        //     playerColour.textContent = "green";
-        // }
-        
-        //console.log(slots[newSlot]);
+        myPlay();
     }
 
 
@@ -102,4 +96,15 @@ function emptySpacesColumn(toCheck) {
     }
 
     return 6 - emptyCounter;
+}
+
+function checkForDraw(){
+
+
+}
+
+function myPlay(){
+    var audio = new Audio("../assets/sounds/coin.wav");
+    audio.volume = 0.3;
+    audio.play();
 }
