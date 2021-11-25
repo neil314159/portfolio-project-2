@@ -141,4 +141,20 @@ alert('winner');
     }
 
 
+    //check vertically
+    for (let i = 0; i < 7; i++) {
+        //console.log(i);
+        for(let k=0; k<4; k++){
+           
+    if (slots[i+(7*k)].classList.contains(currentColour) && slots[i+(7*k)+1].classList.contains(currentColour))alert('winner vertical');
+
+    // if (slots[i+(7*k)].classList.contains(currentColour) && slots[i+(7*k)+1].classList.contains(currentColour) && slots[i+(7*k)+2].classList.contains(currentColour) && slots[i+(7*k)+3].classList.contains(currentColour)){
+    // alert('winner vertical');
+//console.log(i+(7*k))
+//console.log(i+(7*k)+1)
+
+            
+        }
+    }
+
 }
