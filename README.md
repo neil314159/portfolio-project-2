@@ -25,8 +25,9 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 * Home Screen
 
 ### Features to implement in the future
-* Currently the logic used by the computer player is quite simple. The game of Connect 4 has been solved mathematicallly, so it would be possible to add a file of all possible game permutations and select the best repsonse to make as a player. 
-* Adding some sound effects and animations to the game would increase the level of interactivity and user engagement.
+* Currently the logic used by the computer player is quite simple. It is possible to calculate multiple moves ahead and choose the best option statistically, but this is quite taxing on the browser when done through CSS and Javascript. A different software framework may be required for handling these operations.
+* Adding some sound effects and animations to the game would increase the level of interactivity.
+* An online multiplayer option could be added to increase user engagement. This would require managing user accounts and networking protocols.
 
 ## Wireframes
 
@@ -40,34 +41,33 @@ https://clrs.cc
 
 
 * HTML 
-    * The structure and contents of the website were created using the HTML language.
+    * HTML was used to define the content and overall structure of the website.
 * CSS 
-    * The CSS language was used for styling and layout of the site.
+    * CSS was used for styling the elements of the site, as well as for defining and manpilating 3D elements needed for the game.
 * JavaScript
-* [Google Fonts](https://fonts.google.com/)
-	* Google Fonts was used to generate the CSS codes to import the 'Work Sans' and 'Bitter' fonts used for the headings and text.
-* [FontPair](https://www.fontpair.co)
-    * FontPair was used to explore and evaluate different combinations of fonts.
+    * Javascript was used to create the layout and interactive elements of the game. This involved using event listeners to trigger actions, and manipulating the DOM to manage the state of the game.
 * [Github](https://github.com) 
-    * GitHub is used to host the source code of the site.
+    * GitHub is used to store the source code of the site.
 * [Git Pages](https://pages.github.com)
-    * Git Pages is the platform upon which the site is deployed.
+    * Git Pages was used to deploy the website.
 * [Gitpod](https://gitpod.io) 
-    * Gitpod was used as a development environment and pushed code to Github for storage and deployment.
+    * Gitpod provided a remote development environment and was linked to Github to facilitate storage and deployment.
+* [Google Fonts](https://fonts.google.com/)
+	* Google Fonts was used to browse a number of options and select the Sora font as being suitable for the project.
 * [Balsamiq](https://balsamiq.com/wireframes/)
 	* Balsamiq was used to explore initial designs for the site and develop wireframe models of the layout.
-* [Coolers CSS Pallette Generator](https://coolors.co)
-    * Coolers was used to generate and compare colour pallettes to make sure the site had matching colour tones.
+* [clrs.cc](https://clrs.cc)
+    * This site provided a pallette of suitable colours for a modern website which were then adjusted for my project.
 * [MacOS Preview](https://support.apple.com/guide/preview/welcome/mac)
-    * Preview was used to resize and crop images for use on the site.
+    * MacOS Preview was used to generate and edit screenshots of the website.
 * [Favicon](https://favicon.io/) 
-    * was used to generate and download the favicon for the website.
+    * Favicon.io was used to draw, edit and download a favicon ready to deploy to the site.
 * [Lighthouse](https://developers.google.com/web/tools/lighthouse#devtools) 
-    * Lighthouse provided a report pointing out problems with speed and accessibility. 
+    * Google Lighthouse generated a report which verified the performance and usability of the site. 
 * [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) 
-    * Chrome Developer Tools were invaluable to help diagnose layout errors.
+    * Chrome Developer Tools were used to debug programming logic errors by logging variables to the console.
 * [Wave Web Accessibility Tool](https://wave.webaim.org) 
-    * The Wave Tool provided a detailed report on the level of accessibility of the site.
+    * The Wave Tool generated a report which highlighted potential areaas of concern for users with accessibilty concerns.
 ## Testing
 
 
@@ -86,22 +86,22 @@ No other bugs were found during my testing.
 ## Deployment
 
 ### Project Set-up
-The recommended Code Institute template found [here](https://github.com/Code-Institute-Org/gitpod-full-template) was used. This template was pre-configured with useful extensions and allowed me to get the project up and running quickly. I selected a repository name and used Gitpod to start editing my project files.
+The recommended Code Institute template found [here](https://github.com/Code-Institute-Org/gitpod-full-template) was used. This template was set up with a standard configuration for VSCode and Gitod which saved time and let me get started quickly. I chose a repository name and used Gitpod to create and edit my project files.
 
-The Remote/Guide website was deployed to GitHub Pages by following these steps:
-1. Navigate to the [Project 1 portfolio](https://github.com/neil314159/portfolio-project-2) on GitHub.
+The Remote/Guide website was deployed to GitHub Pages by the folllowing actions:
+1. Navigate to [Project 2 Portfolio](https://github.com/neil314159/portfolio-project-2) on GitHub.
 1. Click on the 'Settings' tab.
-1. Select 'Pages' from the menu on the left. 
+1. Select 'Pages' from the menu on the left side of the page. 
 1. Select the 'main' branch in the source selector drop-down.
 1. Click 'Save'.
-1. After a few moments the website was deployed, and can be accessed here: https://neil314159.github.io/portfolio-project-2/
+1. After a few minutes the website was deployed. The finished project can be found here: https://neil314159.github.io/portfolio-project-2/
 
 
 ## Credits
 
 ### Code
 
-This [tutorial](https://3dtransforms.desandro.com/cube) on how to construct and rotate 3D cubes in CSS was used to understand some principles used here.
+This [tutorial](https://3dtransforms.desandro.com/cube) on how to construct and rotate 3D cubes in CSS was used to understand some of the principles used in my project.
 
 ### Acknowledgements
 Thanks to Daisy McGirr for her advice and guidance on this project.

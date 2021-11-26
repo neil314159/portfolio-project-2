@@ -197,10 +197,3 @@ input.largecheck {
     color: #F012BE;
     transition: 0.5s;
 }
-
-/* responsive scaling for player status text  */
-#playerStatus {
-    color: white;
-    margin: 1vh;
-    font-size: clamp(1.5rem, 1vw + 0.5rem, 2rem);
-}
