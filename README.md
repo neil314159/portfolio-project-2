@@ -32,18 +32,11 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 ## Wireframes
 
 ## Technologies Used
-* HTML 
-    * The structure and contents of the website were created using the HTML language.
-* CSS 
-    * The CSS language was used for styling and layout of the site.
-
-https://clrs.cc
-
 
 * HTML 
     * HTML was used to define the content and overall structure of the website.
 * CSS 
-    * CSS was used for styling the elements of the site, as well as for defining and manpilating 3D elements needed for the game.
+    * CSS was used for styling the elements of the site, as well as for defining and manipulating 3D elements needed for the game.
 * JavaScript
     * Javascript was used to create the layout and interactive elements of the game. This involved using event listeners to trigger actions, and manipulating the DOM to manage the state of the game.
 * [Github](https://github.com) 
@@ -55,7 +48,7 @@ https://clrs.cc
 * [Google Fonts](https://fonts.google.com/)
 	* Google Fonts was used to browse a number of options and select the Sora font as being suitable for the project.
 * [Balsamiq](https://balsamiq.com/wireframes/)
-	* Balsamiq was used to explore initial designs for the site and develop wireframe models of the layout.
+	* Before starting coding, Balsamiq was used to lay out the site and refine the design.
 * [clrs.cc](https://clrs.cc)
     * This site provided a pallette of suitable colours for a modern website which were then adjusted for my project.
 * [MacOS Preview](https://support.apple.com/guide/preview/welcome/mac)
@@ -67,7 +60,8 @@ https://clrs.cc
 * [Google Chrome Developer Tools](https://developers.google.com/web/tools/chrome-devtools) 
     * Chrome Developer Tools were used to debug programming logic errors by logging variables to the console.
 * [Wave Web Accessibility Tool](https://wave.webaim.org) 
-    * The Wave Tool generated a report which highlighted potential areaas of concern for users with accessibilty concerns.
+    * The Wave Tool generated a report which highlighted potential problems for users with accessibilty concerns.
+
 ## Testing
 
 
@@ -76,7 +70,13 @@ https://clrs.cc
         1. Select a test suite of browsers (Chrome, Safari, Firefox).
 
 ### Validation Testing
-* HTML: All pages in the site were tested
+
+* HTML: The site was fully tested using the [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fneil314159.github.io%2Fportfolio-project-2%2F). There were no errors and no warnings.
+* The [W3C Jigsaw Validator](jigsaw.w3.org) was used to check the CSS of the website. There were no errors shown.
+* Accessibility: the site was checked for accessibiltiy problems using the Google Lighthouse suite in Chrome and the [Wave](https://wave.webaim.org/report#/https://neil314159.github.io/portfolio-project-2/index.html) Repoort Generator. This showed no errors.
+* [JSHint](https://jshint.com/) was used to validate the project website. This showed up one warning about declaring a function within a loop that could potentially access a variable outside the scope of the loop. This method of declaration was used in the course material. This is also a commmonly-reported overzealous warning from JSHint, as using let rather than var manages the scope of the loop properly and renders this operation safe.
+
+![Lighthouse](https://github.com/neil314159/portfolio-project-2/blob/main/docs/lighthouse.png)
 
 ### Unfixed Bugs
 
