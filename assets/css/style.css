@@ -18,18 +18,18 @@ body.darkmode {
 }
 
 h1 {
-    padding-top: 40px;
+    padding-top: 3vw;
     color: white;
     text-decoration: none;
 
     /* vary text size to match size of page*/
-    font-size: 4rem;
+    font-size: 7vmin;
     font-family: 'Work Sans', sans-serif;
     text-transform: uppercase;
     letter-spacing: 4px;
 
 
-    line-height: 6rem;
+    /* line-height: 6rem; */
 }
 
 /* grid for layout of game board */
@@ -165,28 +165,25 @@ h1 {
 
 
 .gamemenu {
-    font-size: 3em;
+    font-size: 5vw;
 }
 
 
 /* increase size of checkboxes to make them easier to click */
 input.largecheck {
-    width: 2em;
-    height: 2em;
+    width: 2vh;
+    height: 2vh;
 }
 
-
-
-@media (max-width: 760px) {}
 
 .button {
     background-color: #4CAF50;
     /* Green */
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 32px;
+    font-size: 3vh;
 }

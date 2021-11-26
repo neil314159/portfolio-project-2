@@ -47,6 +47,7 @@ function createEventListeners() {
         let faces = document.getElementsByClassName("box");
         faces[0].classList.remove("spinback");
         faces[0].classList.remove("spinleft");
+        //faces[0].classList.add("spinright");
         faces[0].classList.add("spinfront");
         clearBoard();
     });
@@ -55,6 +56,7 @@ function createEventListeners() {
         let faces = document.getElementsByClassName("box");
         faces[0].classList.remove("spinback");
         faces[0].classList.remove("spinleft");
+        //faces[0].classList.add("spinright");
         faces[0].classList.add("spinfront");
         clearBoard();
     });
