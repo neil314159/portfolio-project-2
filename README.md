@@ -1,6 +1,13 @@
 # Connect 4
 
-The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/).
+This project aims to bring a classic board game up to date with a fresh digital version that keeps all the fun.
+
+ vibrat digital version of a classic family board game.
+
+ This project was completed using material learned in the first two modules of the Code Institute Diploma in Software Development, covering HTML, CSS and JavaScript.
+
+The website can be seen [here](https://neil314159.github.io/portfolio-project-2/).
+
 ![Mockup](https://github.com/neil314159/portfolio-project-2/blob/main/docs/screenshot.png) <br>
 
 ## Table of Contents
@@ -18,17 +25,23 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 ## Features
 
 * Home Screen
-    * This project exists on a single HTML page, and all interaction is through the board game and buttons prsented on the screen. The home page has a vibrant colour scheme designed to provide a sense of fun. The game board and menus are presented on a 3D cube which rotates to display the relevant content and engage the user.
+    * This project exists on a single HTML page, and all interaction is through the board game and buttons presented on the screen. The home page has a vibrant colour scheme designed to provide a sense of fun. The game board and menus are presented on a 3D cube which rotates to display the relevant content and engage the user.
 
     ![Homescreen](docs/homescreen.png)
 
 * Game Board
-    * This board is a digital representation of the classic Connect 4 board game. Each empty slot subtly changes colour when the user hovers their mouse over. Once the user clicks the column they want to select, a green or yellow token will appear in the next availabe location.
+    * This board is a digital representation of the classic Connect 4 board game. Each empty slot subtly changes colour when the user hovers their mouse over. Once the user clicks the column they want to select, a green or yellow token will appear in the next available location.
 
     ![Board](docs/gameboard.png)
 
+* Computer Player Mode
+	* This mode provides a simple computer opponent for the player. Programmed in Javascript, this algorithm looks for patterns of three tokens already on the board, and seeks to disrupt them before them other player can win. It does this by looking at open slots beside any vertical, horizontal or diagonal stretches of three tokens and then places a token in the fourth spot. If there are no such patterns on the board, the computer chooses a column at random.
+
+* 2 Player Mode
+    * This mode allows for 2 players using the same device side-by-side to take turns. There are green and yellow tokens which alternate on every turn. 
+
 * Control Buttons
-    * These buttons under the main game board allow the user to reset the game back to it's starting point, or to access the setting menu. The settings menu button will toggle over and back to the setting page if tapped repeatedly.
+    * These buttons under the main game board allow the user to reset the game back to its starting point, or to access the setting menu. The settings menu button will toggle over and back to the setting page if tapped repeatedly.
 
      ![Buttons](docs/buttons.png)
 
@@ -37,19 +50,13 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 
     ![Status](docs/status.png)
 
-* Computer Player Mode
-	* This mode provides a simple computer opponent for the player. Programmed in Javascript, this algorithm looks for patterns of three tokens already on the board, and seeks to disrupt them before them other player can win. It does this by looking at open slots beside any vertical, horizontal or diagonal stretches of three tokens and then places a token in the fourth spot. If there are no such patterns on the board, the computer chooses a column at random.
-
-* 2 Player Mode
-    * This mode allows for 2 players using the same device side-by-side to take turns. There are green and yellow tokens which alternate on every turn. 
-
 * Night Mode
     * Turning on night mode darkens the background of the site, making it easier to use at night when on a phone or laptop.
 
     ![Nightmode](docs/nightmode.png)
 
 * Results Page
-    * This page notifies the user who has won the game, for either a two-player or computer opponent game. It also has a button allowing the user to restart the next game straight away. <br>
+    * This page notifies the user who has won the game, for either a two-player or computer opponent game. It also has a button allowing the user to restart the next game straight away. 
 
     ![Resultspage](docs/resultspage.png)
 
@@ -110,7 +117,7 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 
 * HTML: The site was fully tested using the [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fneil314159.github.io%2Fportfolio-project-2%2F). There were no errors and no warnings.
 * The [W3C Jigsaw Validator](jigsaw.w3.org) was used to check the CSS of the website. There were no errors shown.
-* Accessibility: the site was checked for accessibility problems using the Google Lighthouse suite in Chrome and the [Wave](https://wave.webaim.org/report#/https://neil314159.github.io/portfolio-project-2/index.html) Repoort Generator. This showed no errors.
+* Accessibility: the site was checked for accessibility problems using the Google Lighthouse suite in Chrome and the [Wave](https://wave.webaim.org/report#/https://neil314159.github.io/portfolio-project-2/index.html) Report Generator. This showed no errors.
 * [JSHint](https://jshint.com/) was used to validate the Javascript on the project website. This showed up one warning about declaring a function within a loop that could potentially access a variable outside the scope of the loop. This method of declaration was used in the course material. This is also a commmonly-reported overzealous warning from JSHint, as using let rather than var manages the scope of the loop properly and renders this operation safe.
 
 ![Lighthouse](https://github.com/neil314159/portfolio-project-2/blob/main/docs/lighthouse.png)
@@ -123,9 +130,9 @@ There are no other unfixed bugs at this point.
 ## Deployment
 
 ### Project Set-up
-The recommended Code Institute template found [here](https://github.com/Code-Institute-Org/gitpod-full-template) was used. This template was set up with a standard configuration for VSCode and Gitod which saved time and let me get started quickly. I chose a repository name and used Gitpod to create and edit my project files.
+The recommended Code Institute template found [here](https://github.com/Code-Institute-Org/gitpod-full-template) was used. This template was set up with a standard configuration for VSCode and Gitpod which saved time and let me get started quickly. I chose a repository name and used Gitpod to create and edit my project files.
 
-The Remote/Guide website was deployed to GitHub Pages by the folllowing actions:
+The Remote/Guide website was deployed to GitHub Pages by the following actions:
 1. Navigate to [Project 2 Portfolio](https://github.com/neil314159/portfolio-project-2) on GitHub.
 1. Click on the 'Settings' tab.
 1. Select 'Pages' from the menu on the left side of the page. 
