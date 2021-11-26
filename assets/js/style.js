@@ -12,7 +12,7 @@ function createEventListeners() {
         element.classList.toggle("darkmode");
     });
 
-    // human or computer opponent check 
+    // human or computer opponent checkbox 
     var computerCheck = document.getElementById("computerPlayer");
     computerCheck.addEventListener("change", function () {
         clearBoard();
@@ -257,7 +257,7 @@ function computerNextMove() {
     return nextMove;
 }
 
-/**Display the results of the game to the user */
+/**Display the results of the game to the user, the draw boolean determines if it was a draw or win */
 function showResults(draw) {
     let faces = document.getElementsByClassName("box");
     faces[0].classList.add("spinleft");

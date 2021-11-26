@@ -9,7 +9,7 @@ The website can be seen [here](https://neil314159.github.io/portfolio-project-2/
 ![Mockup](https://github.com/neil314159/portfolio-project-2/blob/main/docs/screenshot.png) <br>
 
 ## Table of Contents
-* [Purpose](#Purpose)
+
 * [Features](#Features)
 * [Future Features](#features-to-implement-in-the-future)
 * [Wireframes](#wireframes)
@@ -148,9 +148,8 @@ The website can be seen [here](https://neil314159.github.io/portfolio-project-2/
         1. Hover over gameplay elements with the mouse and verify that they change colour appropriately.
         1. Operate the 3D animations by clicking the menu buttons and verify that they behave as expected with no graphical glitches or clipping issues.
     * Result:
-        * Each page was correctly highlighted in the menu when the page is currently selected.
+        * All graphical elements of the game behaved correctly when interacting using a mouse.
                 
-
 ### Fixed Bugs
 
 * After the 3D elements of the site design were implemented, they were tested on different browsers. The 3D CSS cube had no problems on Chrome or Firefox, but displayed clipping issues on Safari. After testing further, it was necessary to refactor the CSS code for displaying 3D shapes to use a different approach.
@@ -164,7 +163,7 @@ The website can be seen [here](https://neil314159.github.io/portfolio-project-2/
 * HTML: The site was fully tested using the [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fneil314159.github.io%2Fportfolio-project-2%2F). There were no errors and no warnings.
 * The [W3C Jigsaw Validator](jigsaw.w3.org) was used to check the CSS of the website. There were no errors shown.
 * Accessibility: the site was checked for accessibility problems using the Google Lighthouse suite in Chrome and the [Wave](https://wave.webaim.org/report#/https://neil314159.github.io/portfolio-project-2/index.html) Report Generator. This showed no errors.
-* [JSHint](https://jshint.com/) was used to validate the Javascript on the project website. This showed up one warning about declaring a function within a loop that could potentially access a variable outside the scope of the loop. This method of declaration was used in the course material. This is also a commmonly-reported overzealous warning from JSHint, as using let rather than var manages the scope of the loop properly and renders this operation safe.
+* [JSHint](https://jshint.com/) was used to validate the Javascript on the project website. This showed up one warning about declaring a function within a loop that could potentially access a variable outside the scope of the loop. This method of declaration was used in the course material. This is also a commonly-reported overzealous warning from JSHint, as using let rather than var manages the scope of the loop properly and renders this operation safe.
 
 ![Lighthouse](https://github.com/neil314159/portfolio-project-2/blob/main/docs/lighthouse.png)
 
