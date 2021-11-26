@@ -18,12 +18,12 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 ## Features
 
 * Home Screen
-    * 
-    
+    * This project exists on a single HTML page, and all interaction is through the board game and buttons prsented on the screen. The home page has a vibrant colour scheme designed to provide a sense of fun. The game board and menus are presented on a 3D cube which rotates to display the relevant content and engage the user.
+
     ![Homescreen](docs/homescreen.png)
 
 * Game Board
-    * This board is a digital 
+    * This board is a digital representation of the classic Connect 4 board game. Each empty slot subtly changes colour when the user hovers their mouse over. Once the user clicks the column they want to select, a green or yellow token will appear in the next availabe location.
 
     ![Board](docs/gameboard.png)
 
@@ -41,7 +41,7 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 	* This mode provides a simple computer opponent for the player. Programmed in Javascript, this algorithm looks for patterns of three tokens already on the board, and seeks to disrupt them before them other player can win. It does this by looking at open slots beside any vertical, horizontal or diagonal stretches of three tokens and then places a token in the fourth spot. If there are no such patterns on the board, the computer chooses a column at random.
 
 * 2 Player Mode
-    * This mode allows for 2 players using the same device side-by-side to take turns. There are green and yellow tokems which alternate on every turn. 
+    * This mode allows for 2 players using the same device side-by-side to take turns. There are green and yellow tokens which alternate on every turn. 
 
 * Night Mode
     * Turning on night mode darkens the background of the site, making it easier to use at night when on a phone or laptop.
@@ -49,7 +49,7 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
     ![Nightmode](docs/nightmode.png)
 
 * Results Page
-    * This page notifies the user who has won the game, for either a two-player or computer opponent game. It also has a button allowing the suer to restart the next game straight away. <br>
+    * This page notifies the user who has won the game, for either a two-player or computer opponent game. It also has a button allowing the user to restart the next game straight away. <br>
 
     ![Resultspage](docs/resultspage.png)
 
