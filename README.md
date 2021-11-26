@@ -110,11 +110,54 @@ The website can be seen [here](https://neil314159.github.io/portfolio-project-2/
 ## Testing
 
 
-* Test how responsive the website is on different browsers and screen sizes.
+* Test that the site is responsive and scales smoothly across different screen sizes.
     * Test:
-        1. Select a test suite of browsers (Chrome, Safari, Firefox).
+        1. Select a number of common browsers such as Chrome, Safari and Firefox.
+        1. Navigate to the site and select the dev tools for each browser.
+        1. Examine the site at a number of different resolutions from widescreen monitor (2000px wide) down to small mobile phone (300px wide).
+        1. Verify that the site looks and behaves correctly at each resolution and scales smoothly between resolutions.
+    * Result:
+        * The site behaved as expected across a variety of browsers and screen sizes.
+
+* Test that site operates correctly on a physical mobile device.
+    * Test:
+        1. Secure a number of mobile devices such as an iPhone XR and a Samsung S20.
+        1. On each phone, open the browser application and input the address of the site.
+        1. Click on every menu option and test gameplay to make sure it works the same as on a desktop computer.
+    * Result:
+        * On both phones the site behaved correctly in terms of appearance and gameplay.
+
+* Test the gameplay logic of the site
+    * Test:
+        1. Navigate to the site.
+        1. Play multiple games using different strategies and menu options to verify that the expected results and behaviours are displayed.
+    * Result:
+        * All options and games behaved as expected under a variety of conditions.
+
+* Choose every button and menu option to ensure they operate correctly
+    * Test:
+        1. Navigate to the site.
+        1. Click every button multiple times and in different sequences to ensure that the game works correctly.
+        1. All options selected in the menu should be reflected properly in the game.
+    * Result:
+        * All buttons and menu options behaved correctly when operated in different sequences and combinations..
+
+* Validate that all graphical elements behave correctly when interacting with the mouse.
+    * Test:
+        1. Open the browser and navigate to the website.
+        1. Hover over gameplay elements with the mouse and verify that they change colour appropriately.
+        1. Operate the 3D animations by clicking the menu buttons and verify that they behave as expected with no graphical glitches or clipping issues.
+    * Result:
+        * Each page was correctly highlighted in the menu when the page is currently selected.
+                
 
 ### Fixed Bugs
+
+* After the 3D elements of the site design were implemented, they were tested on different browsers. The 3D CSS cube had no problems on Chrome or Firefox, but displayed clipping issues on Safari. After testing further, it was necessary to refactor the CSS code for displaying 3D shapes to use a different approach.
+
+* When the project was nearing completion, it was tested on a number of handheld devices including an iPhone XR. The site displayed an issue with text incorrectly overflowing a div, an issue that was not apparent on the site simulators or dev tools. The code was adjusted and the issue solved.
+
+* During testing of gameplay, an issue arose where the computer was always designated the winner even after losing. Using Chrome dev tools and logging the game variables to the console, the bug was tracked down and fixed.
 
 ### Validation Testing
 
