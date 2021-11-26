@@ -27,23 +27,26 @@
       </div>
       <!-- settings on back of box -->
       <div class="boxface boxfaceback">
-        <h2>Settings</h2>
+       
         <div class="gamemenu">
+         
           <!-- options for computer opponent and night mode  -->
-          <label for="computerPlayer">Computer Opponent:</label>
-          <input type="checkbox" name="computerPlayer" id="computerPlayer" checked class="largecheck"><br>
+          <div class="menuoption">
+          <label for="computerPlayer">Play Computer:</label>
+          <input type="checkbox" name="computerPlayer" id="computerPlayer" checked class="largecheck"><br></div>
+          <div class="menuoption">
           <label for="darkmodecheck">Night Mode:</label>
-          <input type="checkbox" name="darkmodecheck" id="darkmodecheck" class="largecheck"><br>
+          <input type="checkbox" name="darkmodecheck" id="darkmodecheck" class="largecheck"><br></div>
           <!-- return to game being played -->
-          <button class="returnHome button">Return to Game</button>
+          <button class="returnHome button menuoption">Return to Game</button>
         </div>
       </div>
       <div class="boxface boxfaceright"></div>
       <!-- this face of cube used to show game results and restart new game  -->
       <div class="boxface boxfaceleft">
-        <h1>Results</h1>
-        <div class="results" id="resultstext"></div>
-        <button class="newGame button">Start a New Game</button>
+        <!-- <div class="menuoption gamemenu">Results</div> -->
+        <div class="results menuoption gamemenu" id="resultstext"></div>
+        <button class="newGame button menuoption">Start a New Game</button>
       </div>
       <div class="boxface boxfacetop"></div>
       <div class="boxface boxfacebottom"></div>

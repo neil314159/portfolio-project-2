@@ -271,10 +271,10 @@ function showResults() {
 
     if (computerCheck.checked) {
 console.log(playerColour.textContent);
-        if (playerColour.textContent === "green") resultsText.innerText = 'computer won';
-        else resultsText.innerText = 'you won';
+        if (playerColour.textContent === "green") resultsText.innerText = 'The computer won!';
+        else resultsText.innerText = 'You won!';
     } else {
-        resultsText.innerText = `${playerColour.textContent} won`;
+        resultsText.innerText = `${playerColour.textContent} won!`;
        
     }
 }

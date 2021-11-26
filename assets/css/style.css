@@ -126,7 +126,7 @@ h6{
 }
 
 .boxfaceback {
-    background: #39CCCC;
+    background: #008080;
     transform: rotateY(180deg) translateZ(35vmin);
 }
 
@@ -174,14 +174,29 @@ h6{
 
 
 .gamemenu {
+    
     font-size: 5vmin;
+    
+    
+    
+}
+
+.menuoption{
+    padding: 5vmin 0;
 }
 
 
+
+.gamemenu p{
+    margin: 5vmin;
+    
+    text-transform: uppercase;
+}
+
 /* increase size of checkboxes to make them easier to click */
 input.largecheck {
-    width: 3vw;
-    height: 3vw;
+    width: 2.5vmax;
+    height: 2.5vmax;
 }
 
 
