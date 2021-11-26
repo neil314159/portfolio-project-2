@@ -24,6 +24,25 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 
 * Home Screen
 
+The 
+
+* Game Board
+
+* Control Buttons
+
+* Player Status
+
+* Computer Player Mode
+
+* 2 Player Mode
+
+* Dark Mode
+
+* Results Page
+
+* Setting Page
+
+
 ### Features to implement in the future
 * Currently the logic used by the computer player is quite simple. It is possible to calculate multiple moves ahead and choose the best option statistically, but this is quite taxing on the browser when done through CSS and Javascript. A different software framework may be required for handling these operations.
 * Adding some sound effects and animations to the game would increase the level of interactivity.
