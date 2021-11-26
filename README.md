@@ -1,10 +1,8 @@
 # Connect 4
 
-This project aims to bring a classic board game up to date with a fresh digital version that keeps all the fun.
+Connect 4 is a classic family game, and this project brings it online with eye-catching colours and 3D interactive elements. Players can battle each other in two player mode or challenge the computer to a match.
 
- vibrat digital version of a classic family board game.
-
- This project was completed using material learned in the first two modules of the Code Institute Diploma in Software Development, covering HTML, CSS and JavaScript.
+ The project was completed using material learned in the first two modules of the Code Institute Diploma in Software Development, covering HTML, CSS and JavaScript.
 
 The website can be seen [here](https://neil314159.github.io/portfolio-project-2/).
 
