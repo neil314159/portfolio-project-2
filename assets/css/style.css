@@ -35,9 +35,10 @@ h1 {
     /* line-height: 6rem; */
 }
 
-h6{
+.info{
     color: white;
-    font-size: 2vh;
+    text-align: center;
+    font-size: clamp(1.5rem, 1vw + 0.5rem, 2rem);
     text-align: center;
 }
 
@@ -214,7 +215,7 @@ input.largecheck {
 
 .button {
     display: inline-block;
-    font-size: 2vh;
+    font-size: 3vh;
     background-color: #F012BE;
     margin: 0 10px;
     font-weight: bold;
@@ -236,5 +237,6 @@ input.largecheck {
   #playerStatus{
       color: white;
       margin: 1vh;
-      font-size: 2vh;
+     font-size:clamp(1.5rem, 1vw + 0.5rem, 2rem);
+      
   }
