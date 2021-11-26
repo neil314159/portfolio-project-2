@@ -30,13 +30,16 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 * An online multiplayer option could be added to increase user engagement. This would require managing user accounts and networking protocols.
 
 ## Wireframes
+![Homepage](docs/homepage.png)<br>
+![Settings](docs/settings.png)<br>
+![Results](docs/results.png)<br>
 
 ## Technologies Used
 
 * HTML 
     * HTML was used to define the content and overall structure of the website.
 * CSS 
-    * CSS was used for styling the elements of the site, as well as for defining and manipulating 3D elements needed for the game.
+    * CSS was used for styling the site, as well as for defining and manipulating 3D elements needed for the game.
 * JavaScript
     * Javascript was used to create the layout and interactive elements of the game. This involved using event listeners to trigger actions, and manipulating the DOM to manage the state of the game.
 * [Github](https://github.com) 
@@ -73,14 +76,14 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 
 * HTML: The site was fully tested using the [W3C Validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fneil314159.github.io%2Fportfolio-project-2%2F). There were no errors and no warnings.
 * The [W3C Jigsaw Validator](jigsaw.w3.org) was used to check the CSS of the website. There were no errors shown.
-* Accessibility: the site was checked for accessibiltiy problems using the Google Lighthouse suite in Chrome and the [Wave](https://wave.webaim.org/report#/https://neil314159.github.io/portfolio-project-2/index.html) Repoort Generator. This showed no errors.
-* [JSHint](https://jshint.com/) was used to validate the project website. This showed up one warning about declaring a function within a loop that could potentially access a variable outside the scope of the loop. This method of declaration was used in the course material. This is also a commmonly-reported overzealous warning from JSHint, as using let rather than var manages the scope of the loop properly and renders this operation safe.
+* Accessibility: the site was checked for accessibility problems using the Google Lighthouse suite in Chrome and the [Wave](https://wave.webaim.org/report#/https://neil314159.github.io/portfolio-project-2/index.html) Repoort Generator. This showed no errors.
+* [JSHint](https://jshint.com/) was used to validate the Javascript on the project website. This showed up one warning about declaring a function within a loop that could potentially access a variable outside the scope of the loop. This method of declaration was used in the course material. This is also a commmonly-reported overzealous warning from JSHint, as using let rather than var manages the scope of the loop properly and renders this operation safe.
 
 ![Lighthouse](https://github.com/neil314159/portfolio-project-2/blob/main/docs/lighthouse.png)
 
 ### Unfixed Bugs
 
-No other bugs were found during my testing.
+There are no other unfixed bugs at this point.
 
 
 ## Deployment
