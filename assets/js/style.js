@@ -82,6 +82,8 @@ function clearBoard() {
     let slots = document.getElementsByClassName("slot");
     for (let slot of slots) {
 
+        // slot.classList.remove('clear', 'green', 'yellow');
+        // slot.classList.add('green');
         slot.classList.remove('clear', 'green', 'yellow');
         slot.classList.add('clear');
     }
@@ -163,27 +165,27 @@ function checkForWin(colourW) {
     for (let i = 0; i < 42; i += 7) {
         for (let k = 0; k < 4; k++) {
             if (slots[i + k].classList.contains(currentColour) && slots[i + k + 1].classList.contains(currentColour) && slots[i + k + 2].classList.contains(currentColour) && slots[i + k + 3].classList.contains(currentColour)) {
-                showResults();
+                return showResults();
             }
         }
     }
     //check vertically
     for (let i = 0; i < 7; i++) {
         for (let k = 0; k < 3; k++) {
-            if (slots[i + (7 * k)].classList.contains(currentColour) && slots[i + (7 * k) + 7].classList.contains(currentColour) && slots[i + (7 * k) + 14].classList.contains(currentColour) && slots[i + (7 * k) + 21].classList.contains(currentColour)) showResults();
+            if (slots[i + (7 * k)].classList.contains(currentColour) && slots[i + (7 * k) + 7].classList.contains(currentColour) && slots[i + (7 * k) + 14].classList.contains(currentColour) && slots[i + (7 * k) + 21].classList.contains(currentColour)) return showResults();
         }
     }
     //check diagonally top left to bottom right
     let leftRightStartingPoints = [0, 1, 2, 3, 7, 8, 9, 10, 14, 15, 16, 17];
     for (let i = 0; i < leftRightStartingPoints.length; i++) {
         let k = leftRightStartingPoints[i];
-        if (slots[k].classList.contains(currentColour) && slots[k + 8].classList.contains(currentColour) && slots[k + 16].classList.contains(currentColour) && slots[k + 24].classList.contains(currentColour)) showResults();
+        if (slots[k].classList.contains(currentColour) && slots[k + 8].classList.contains(currentColour) && slots[k + 16].classList.contains(currentColour) && slots[k + 24].classList.contains(currentColour)) return showResults();
     }
     //check diagonally top right to bottom left
     let rightLeftStartingPoints = [3, 4, 5, 6, 10, 11, 12, 13, 17, 18, 19, 20];
     for (let i = 0; i < rightLeftStartingPoints.length; i++) {
         let k = rightLeftStartingPoints[i];
-        if (slots[k].classList.contains(currentColour) && slots[k + 6].classList.contains(currentColour) && slots[k + 12].classList.contains(currentColour) && slots[k + 18].classList.contains(currentColour)) showResults();
+        if (slots[k].classList.contains(currentColour) && slots[k + 6].classList.contains(currentColour) && slots[k + 12].classList.contains(currentColour) && slots[k + 18].classList.contains(currentColour)) return showResults();
     }
 }
 
@@ -268,10 +270,11 @@ function showResults() {
     let resultsText = document.getElementById('resultstext');
 
     if (computerCheck.checked) {
-
+console.log(playerColour.textContent);
         if (playerColour.textContent === "green") resultsText.innerText = 'computer won';
         else resultsText.innerText = 'you won';
     } else {
         resultsText.innerText = `${playerColour.textContent} won`;
+       
     }
 }

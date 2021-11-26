@@ -24,7 +24,7 @@ h1 {
 
     /* vary text size to match size of page*/
     font-size: 7vmin;
-    font-family: 'Work Sans', sans-serif;
+    /* font-family: 'Work Sans', sans-serif; */
     text-transform: uppercase;
     letter-spacing: 4px;
 
@@ -176,9 +176,9 @@ input.largecheck {
 }
 
 
-.button {
+/* .button {
     background-color: #4CAF50;
-    /* Green */
+   
     border: none;
     color: white;
     padding: 10px 10px;
@@ -186,4 +186,31 @@ input.largecheck {
     text-decoration: none;
     display: inline-block;
     font-size: 3vh;
-}
+} */
+
+.button {
+    display: inline-block;
+    font-size: 3vh;
+    background-color: #F012BE;
+    margin: 10px;
+    font-weight: bold;
+    padding: 1vh;
+    color: #fff;
+    border: 5px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    transition: 0.5s;
+  }
+  .button:hover,
+  .button:active {
+    background-color: white;
+    color: #F012BE;
+    transition: 0.5s;
+  }
+
+  #playerStatus{
+      color: white;
+      margin: 2em;
+      font-size: 2vh;
+  }
