@@ -18,25 +18,24 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 ## Features
 
 * Home Screen
-    *
+    * 
+    
     ![Homescreen](docs/homescreen.png)
-
-* Navigation Bar 
-    * This provides links to the home page, the resource page and the newsletter signup page, allowing the user to easily navigate their way to each section. This is a clear, simple menu present on every page so the user can be confident in finding their way around the site.
-
-    ![Navigation](docs/nav.png)
 
 * Game Board
     * This board is a digital 
+
     ![Board](docs/gameboard.png)
 
 * Control Buttons
     * These buttons under the main game board allow the user to reset the game back to it's starting point, or to access the setting menu. The settings menu button will toggle over and back to the setting page if tapped repeatedly.
+
      ![Buttons](docs/buttons.png)
 
 * Player Status
 	* This text shows which colour player is currently active.
-     ![Status](docs/status.png)
+
+    ![Status](docs/status.png)
 
 * Computer Player Mode
 	* This mode provides a simple computer opponent for the player. Programmed in Javascript, this algorithm looks for patterns of three tokens already on the board, and seeks to disrupt them before them other player can win. It does this by looking at open slots beside any vertical, horizontal or diagonal stretches of three tokens and then places a token in the fourth spot. If there are no such patterns on the board, the computer chooses a column at random.
@@ -46,14 +45,17 @@ The site can be viewed [here](https://neil314159.github.io/portfolio-project-2/)
 
 * Night Mode
     * Turning on night mode darkens the background of the site, making it easier to use at night when on a phone or laptop.
+
     ![Nightmode](docs/nightmode.png)
 
 * Results Page
-    * This page notifies the user who has won the game, for either a two-player or computer opponent game. It also has a button allowing the suer to restart the next game straight away.
+    * This page notifies the user who has won the game, for either a two-player or computer opponent game. It also has a button allowing the suer to restart the next game straight away. <br>
+
     ![Resultspage](docs/resultspage.png)
 
 * Setting Page
     * Here the user can choose to play two-player or computer games. They can also turn on and off dark mode from this page. Clicking the button in the menu will take you back while still maintaining the state of the game.
+
     ![Settings](docs/settingspage.png)
 
 ### Features to implement in the future
