@@ -12,14 +12,11 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-<!-- stylesheet  -->
+  <!-- stylesheet  -->
   <link rel="stylesheet" href="assets/css/style.css">
-
-  
 </head>
 
 <body>
-
   <h1>Connect 4</h1>
   <div class="info">Connect 4 tokens to win. Play against the computer or a friend!</div>
   <!-- all 3D elements inside one container -->
@@ -33,16 +30,14 @@
       </div>
       <!-- settings on back of box -->
       <div class="boxface boxfaceback">
-       
         <div class="gamemenu">
-         
           <!-- options for computer opponent and night mode  -->
           <div class="menuoption">
-          <label for="computerPlayer">Play Computer:</label>
-          <input type="checkbox" name="computerPlayer" id="computerPlayer" checked class="largecheck"><br></div>
+            <label for="computerPlayer">Play Computer:</label>
+            <input type="checkbox" name="computerPlayer" id="computerPlayer" checked class="largecheck"><br></div>
           <div class="menuoption">
-          <label for="darkmodecheck">Night Mode:</label>
-          <input type="checkbox" name="darkmodecheck" id="darkmodecheck" class="largecheck"><br></div>
+            <label for="darkmodecheck">Night Mode:</label>
+            <input type="checkbox" name="darkmodecheck" id="darkmodecheck" class="largecheck"><br></div>
           <!-- return to game being played -->
           <button class="returnHome button menuoption">Return to Game</button>
         </div>
@@ -50,21 +45,21 @@
       <div class="boxface boxfaceright"></div>
       <!-- this face of cube used to show game results and restart new game  -->
       <div class="boxface boxfaceleft">
-        <!-- <div class="menuoption gamemenu">Results</div> -->
         <div class="results menuoption gamemenu" id="resultstext"></div>
         <button class="newGame button menuoption">Start a New Game</button>
       </div>
+      <!-- rest of cube faces  -->
       <div class="boxface boxfacetop"></div>
       <div class="boxface boxfacebottom"></div>
       <div class="boxface boxfaceshadow"></div>
     </div>
-
   </div>
   <!-- buttons for starting new game or going to settings menu  -->
   <div class="buttons">
     <button class="newGame button">Reset Game</button>
     <button class="menu button">Settings</button>
   </div>
+  <!-- colour of current player  -->
   <p id="playerStatus">Current player: <span id="player">yellow</span></p>
   <script src="assets/js/style.js"></script>
 
