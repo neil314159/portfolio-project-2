@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -11,6 +13,7 @@ body {
     align-items: center;
     display: flex;
     flex-direction: column;
+    font-family: 'Sora', sans-serif;
 }
 
 body.darkmode {
@@ -18,7 +21,7 @@ body.darkmode {
 }
 
 h1 {
-    padding-top: 3vw;
+    padding-top: 1vw;
     color: white;
     text-decoration: none;
 
@@ -30,6 +33,12 @@ h1 {
 
 
     /* line-height: 6rem; */
+}
+
+h6{
+    color: white;
+    font-size: 2vh;
+    text-align: center;
 }
 
 /* grid for layout of game board */
@@ -78,8 +87,8 @@ h1 {
 .scene {
     width: 70vmin;
     height: 70vmin;
-    margin-top: 25px;
-    margin-bottom: 70px;
+    margin-top: 1vmin;
+    margin-bottom: 6vh;
     perspective: 900px;
 }
 
@@ -171,8 +180,8 @@ h1 {
 
 /* increase size of checkboxes to make them easier to click */
 input.largecheck {
-    width: 2vh;
-    height: 2vh;
+    width: 3vw;
+    height: 3vw;
 }
 
 
@@ -190,11 +199,11 @@ input.largecheck {
 
 .button {
     display: inline-block;
-    font-size: 3vh;
+    font-size: 2vh;
     background-color: #F012BE;
-    margin: 10px;
+    margin: 0 10px;
     font-weight: bold;
-    padding: 1vh;
+    padding: 1vmin;
     color: #fff;
     border: 5px solid #fff;
     text-align: center;
@@ -211,6 +220,6 @@ input.largecheck {
 
   #playerStatus{
       color: white;
-      margin: 2em;
+      margin: 1vh;
       font-size: 2vh;
   }
