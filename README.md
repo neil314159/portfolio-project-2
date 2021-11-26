@@ -1,6 +1,6 @@
 # Connect 4
 
-
+![Mockup](https://github.com/neil314159/portfolio-project-2/blob/main/docs/screenshot.png) <br>
 
 ## Table of Contents
 * [Purpose](#Purpose)
