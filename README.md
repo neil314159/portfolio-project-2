@@ -32,6 +32,9 @@ The website can be seen [here](https://neil314159.github.io/portfolio-project-2/
 
     ![Board](docs/gameboard.png)
 
+* Game Logic
+    * After a player places a token on the board, the entire board is analysed to see if a winning pattern has been completed. The board is sequentially checked for horizontal, vertical and diagonal patterns of four tokens, and notifies the user if one is found, ending the game.
+
 * Computer Player Mode
 	* This mode provides a simple computer opponent for the player. Programmed in Javascript, this algorithm looks for patterns of three tokens already on the board, and seeks to disrupt them before them other player can win. It does this by looking at open slots beside any vertical, horizontal or diagonal stretches of three tokens and then places a token in the fourth spot. If there are no such patterns on the board, the computer chooses a column at random.
 
@@ -110,6 +113,8 @@ The website can be seen [here](https://neil314159.github.io/portfolio-project-2/
 * Test how responsive the website is on different browsers and screen sizes.
     * Test:
         1. Select a test suite of browsers (Chrome, Safari, Firefox).
+
+### Fixed Bugs
 
 ### Validation Testing
 
