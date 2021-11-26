@@ -66,8 +66,8 @@ function createBoard() {
     for (let i = 0; i < 42; i++) {
         let slot = document.createElement('div');
         slot.setAttribute('data-id', i);
-       // slot.tabIndex = 0;
-      //  slot.onkeydown = function(){this.click();};
+        // slot.tabIndex = 0;
+        //  slot.onkeydown = function(){this.click();};
         slot.classList.add('slot');
         slot.classList.add('clear');
         slot.addEventListener("click", function () {
@@ -150,7 +150,7 @@ function checkForDraw() {
         if (slot.classList.contains("clear")) drawCounter++;
     }
     if (drawCounter === 0) {
-       //draw condition showResults();
+        //draw condition showResults();
     } else {
 
     }
@@ -200,7 +200,7 @@ function computerNextMove() {
     let nextMove = 3;
 
     //check base level first
-    
+
     for (let i = 38; i < 42; i++) {
         if (slots[i - 1].classList.contains(currentColour) && slots[i - 2].classList.contains(currentColour) && slots[i - 3].classList.contains(currentColour) && slots[i].classList.contains("clear")) {
             columnVotes[i % 7]++;
@@ -242,7 +242,7 @@ function computerNextMove() {
         if (slots[k].classList.contains("clear") && (slots[k + 7].classList.contains("green") || slots[k + 7].classList.contains("yellow")) && slots[k + 8].classList.contains(currentColour) && slots[k + 16].classList.contains(currentColour) && slots[k + 24].classList.contains(currentColour)) columnVotes[k % 7]++;
     }
     //check diagonally top right to bottom left
-   
+
     let rightLeftStartingPoints = [3, 4, 5, 6, 10, 11, 12, 13, 17, 18, 19, 20];
     for (let i = 0; i < rightLeftStartingPoints.length; i++) {
         let k = rightLeftStartingPoints[i];
@@ -270,11 +270,11 @@ function showResults() {
     let resultsText = document.getElementById('resultstext');
 
     if (computerCheck.checked) {
-console.log(playerColour.textContent);
+        console.log(playerColour.textContent);
         if (playerColour.textContent === "green") resultsText.innerText = 'The computer won!';
         else resultsText.innerText = 'You won!';
     } else {
         resultsText.innerText = `${playerColour.textContent} won!`;
-       
+
     }
 }
