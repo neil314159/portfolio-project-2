@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
     createEventListeners();
 });
 
-/**Generates and attaches all event listeners for buttons and checkboxed */
+/**Generates and attaches all event listeners for buttons and checkboxes */
 function createEventListeners() {
     // dark mode status checkbox
     var darkcheckbox = document.getElementById("darkmodecheck");
@@ -109,10 +109,10 @@ function gameClick(i) {
             let pcSlot = ((pcMove + 1) + (7 * (pcEmpty - 1))) - 1;
             slots[pcSlot].classList.remove("clear");
             slots[pcSlot].classList.add("green");
-            
+
             playerColour.textContent = "green";
             checkForWin("green");
-           playerColour.textContent = "yellow";
+            playerColour.textContent = "yellow";
         } else {
             if (playerColour.textContent === "yellow") {
                 slots[newSlot].classList.remove("clear");
@@ -150,8 +150,8 @@ function checkForDraw() {
         if (slot.classList.contains("clear")) drawCounter++;
     }
     if (drawCounter === 0) {
-         showResults(true);
-    } 
+        showResults(true);
+    }
 }
 
 /**This function iterates through the entire board and checks for a pattern of four pieces in a line
@@ -160,7 +160,7 @@ function checkForDraw() {
 function checkForWin(colourW) {
     let slots = document.getElementsByClassName("slot");
     let currentColour = colourW;
-    
+
     // check horizontally 
     for (let i = 0; i < 42; i += 7) {
         for (let k = 0; k < 4; k++) {
@@ -264,7 +264,7 @@ function showResults(draw) {
     let computerCheck = document.getElementById("computerPlayer");
     let playerColour = document.getElementById('player');
     let resultsText = document.getElementById('resultstext');
-    if(draw){
+    if (draw) {
         resultsText.innerText = "It's a draw!";
         return true;
     }
